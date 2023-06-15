@@ -143,7 +143,26 @@ span::selection {
     justify-content: space-evenly;
 }
 
+.slideout {
+    z-index: -5;
+    position: static;
+    display: flex;
+    justify-content: center;
+    left: 0%; 
+    top: 0%; 
+    position: absolute; 
+    width: 100vw; 
+    height: 100vh; 
+    flex-direction: column;
+    transform: translateX(-100%);
+    animation: navbarSlideIn 0.3s ease-out normal forwards;
+    pointer-events: none;
+    background-color: #ff695e;
+}
+
 .topbar > .mobileNavBlock {
+    animation: navBlockHoveroff 0.3s ease-out normal forwards;
+    z-index: 500;
     justify-self: flex-end !important;
     color: white;
     font-family: 'DM Serif Display', serif;
@@ -154,7 +173,48 @@ span::selection {
     align-items: center;
     background-color: #ff695e;
     margin: 0%; 
-    width: 25vw;
+    width: 10vw;
+}
+
+@keyframes navBlockHover {
+    0% {
+        background-color: #ff695e;
+    }
+    100% {
+        background-color: #d3564d;
+    }
+}
+@keyframes navBlockHoveroff {
+    0% {
+        background-color: #d3564d;
+    }
+    100% {
+        background-color: #ff695e;
+    }
+}
+.mobileNavBlock:hover {
+    animation: navBlockHover 0.3s ease-out normal forwards;
+}
+
+.mobileNavBlock:hover .slideout {
+    animation: navbarSlideOut 0.2s ease-out normal forwards;
+}
+
+@keyframes navbarSlideOut {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+@keyframes navbarSlideIn {
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
 }
 
 @keyframes contactGrow {
