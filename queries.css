@@ -54,9 +54,9 @@
         height: 25vh !important;
     }
     #footer {
-        height:100vh;
+        height:100vh !important;
         width: 100%;
-        margin-top: 0% !important;
+        margin-top: 0px !important;
     }
     #_profileBubble {
         width: 85vw !important;
@@ -64,7 +64,7 @@
     }
 
     body::-webkit-scrollbar {
-        width: 0px !important;
-        background-color: rgb(0, 0, 0);
+        display: none !important;
+        width: 0px;
     }
 }
