@@ -29,6 +29,7 @@ function displaySlideOut(){
     console.log("!!")
     // document.getElementById("_slideout").style.display = "flex"
     document.getElementById("_slideout").style.opacity = "100%";
+    document.getElementById("_slideout").style.pointerEvents = "all";
 }
 
 
