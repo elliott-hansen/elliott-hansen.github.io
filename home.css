@@ -144,6 +144,7 @@ span::selection {
 }
 
 .slideout {
+    overflow: hidden;
     z-index: -15;
     position: static;
     display: flex;

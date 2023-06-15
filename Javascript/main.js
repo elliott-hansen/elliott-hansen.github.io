@@ -15,7 +15,7 @@ document.documentElement.style.setProperty("--vh", window.innerHeight * 0.01 + "
 
 function changeToMobile() {
     console.log("attemtping")
-    var query = window.matchMedia("((pointer:coarse) or (pointer:none))");
+    var query = window.matchMedia("(max-width: 870px) or ((pointer:coarse) or (pointer:none))");
     if(query.matches) {
         document.getElementById("_navbar").style.display = "none";
         document.getElementById("_mobileNavBlock").style.display = "flex";
