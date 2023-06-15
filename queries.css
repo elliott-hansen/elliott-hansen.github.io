@@ -1,6 +1,6 @@
 @import "home.css";
 
-@media screen and ((max-width: 1090px) or (pointer: none) or (pointer: coarse)) { /* If window is small */
+@media screen and (max-width: 1090px) { /* If window is small */
 
     body {
         background-size: 30%;
@@ -39,4 +39,10 @@
         text-align: center !important;
     }
 
+}
+
+@media screen and ((pointer:coarse) or (pointer:none)) {
+    html{
+        body{ width: 870;}
+    }
 }

@@ -9,6 +9,13 @@ function resizeTitle(newTitle) {
         document.getElementById("_titleName").innerHTML = defaultTitle;
     }
 }
+const resizeOps = () => {
+document.documentElement.style.setProperty("--vh", window.innerHeight * 0.01 + "px");
+};
+
+
+resizeOps();
 let defaultTitle = "Elliott H"
 resizeTitle("E");
 window.addEventListener('resize', resizeTitle)
+window.addEventListener("load", resizeOps);
