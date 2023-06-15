@@ -1,14 +1,14 @@
 @import "home.css";
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 700px) or (pointer: none) {
 
     body {
         background-size: 30%;
         transition: 1.5s
     }
 
-    #footer {
-        height: 25% !important;
+    #_footer {
+        height: 25vh !important;
     }
 
     #socialhub {
