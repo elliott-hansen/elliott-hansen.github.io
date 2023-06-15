@@ -23,8 +23,9 @@
 
     #_body {
         flex-direction: column-reverse !important;
-        justify-content: center !important;
+        justify-content: space-evenly !important;
         align-items: center !important;
+        overflow-x: hidden;
     }
 
     #_profileBubble {
@@ -54,5 +55,10 @@
     }
     #footer {
         width: 100%;
+        margin-top: 2vh;
+    }
+    #_profileBubble {
+        width: 85vw !important;
+        height: 50vh !important;
     }
 }
