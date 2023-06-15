@@ -1,6 +1,6 @@
 @import "home.css";
 
-@media screen and (max-width: 700px) or (pointer: none) {
+@media screen and ((max-width: 700px) or (pointer: none)) {
 
     body {
         background-size: 30%;
