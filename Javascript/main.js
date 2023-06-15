@@ -15,7 +15,7 @@ document.documentElement.style.setProperty("--vh", window.innerHeight * 0.01 + "
 
 function changeToMobile() {
     console.log("attemtping")
-    var query = window.matchMedia("(max-width: 700px)");
+    var query = window.matchMedia("((pointer:coarse) or (pointer:none))");
     if(query.matches) {
         document.getElementById("_navbar").style.display = "none";
         document.getElementById("_mobileNavBlock").style.display = "flex";
@@ -33,4 +33,5 @@ let defaultTitle = "Elliott H"
 resizeTitle("E");
 window.addEventListener('resize', resizeTitle);
 window.addEventListener("resize", changeToMobile);
+window.addEventListener("load", changeToMobile);
 window.addEventListener("load", resizeOps);
