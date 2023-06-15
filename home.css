@@ -157,15 +157,15 @@ span::selection {
     flex-direction: column;
     padding-top: 60px;
     justify-content: flex-start;
-    transform: translateX(-100%);
-    animation: navbarSlideIn 5s ease-out normal backwards;
+    transform: translateX(100%);
+    opacity: 0%;
+    animation: navbarAppear 2s ease-in normal forwards;
+    animation: navbarSlideIn 1s ease-out normal backwards;
     pointer-events: none;
     background-color: #ff695e;
 }
 
 .slideout > .slideoutInfoBlock {
-    opacity: 0%;
-    animation: infoBlockDropDown 0.8s ease-out forwards;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -181,7 +181,6 @@ span::selection {
 }
 
 .topbar > .mobileNavBlock {
-    animation: navBlockHoveroff 0.3s ease-out normal forwards;
     z-index: 15;
     justify-self: flex-end !important;
     color: white;
@@ -198,30 +197,13 @@ span::selection {
     border-end-start-radius: 50%;
     width: 64px;
 }
-
-@keyframes navBlockHover {
-    0% {
-        background-color: #ff695e;
-    }
-    100% {
-        background-color: #d3564d;
-    }
-}
-@keyframes navBlockHoveroff {
-    0% {
-        background-color: #d3564d;
-    }
-    100% {
-        background-color: #ff695e;
-    }
-}
 .mobileNavBlock:hover {
     animation: navBlockHover 0.3s ease-out normal forwards;
-    
 }
 
 .mobileNavBlock:hover .slideout {
     animation: navbarSlideOut 0.2s ease-out normal forwards;
+    transform: translateX(0%);
 }
 
 @keyframes navbarSlideOut {
@@ -242,6 +224,10 @@ span::selection {
     100%{
         transform: translateX(100%);
     }
+}
+@keyframes navbarAppear {
+    0% {opacity: 0%;}
+    100% {opacity: 100%;}
 }
 
 @keyframes contactGrow {

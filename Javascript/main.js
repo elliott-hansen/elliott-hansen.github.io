@@ -14,7 +14,6 @@ document.documentElement.style.setProperty("--vh", window.innerHeight * 0.01 + "
 };
 
 function changeToMobile() {
-    console.log("attemtping")
     var query = window.matchMedia("(max-width: 870px) or ((pointer:coarse) or (pointer:none))");
     if(query.matches) {
         document.getElementById("_navbar").style.display = "none";
@@ -26,6 +25,12 @@ function changeToMobile() {
     }
 }
 
+function displaySlideOut(){
+    console.log("!!")
+    // document.getElementById("_slideout").style.display = "flex"
+    document.getElementById("_slideout").style.opacity = "100%";
+}
+
 
 resizeOps();
 changeToMobile();
@@ -35,3 +40,4 @@ window.addEventListener('resize', resizeTitle);
 window.addEventListener("resize", changeToMobile);
 window.addEventListener("load", changeToMobile);
 window.addEventListener("load", resizeOps);
+document.getElementById("_mobileNavBlock").addEventListener("mouseover", displaySlideOut);
