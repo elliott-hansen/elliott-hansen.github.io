@@ -44,8 +44,8 @@
 @media screen and ((pointer:coarse) or (pointer:none)) {
     html{
         body{ 
-            width: 390 !important; 
-            height: 890 !important;
+            width: 100vw !important; 
+            height: 100vh !important;
         }
         
     }
@@ -53,6 +53,6 @@
         height: 25vh !important;;
     }
     #footer {
-        width: 100vw;
+        width: 100%;
     }
 }
