@@ -159,8 +159,7 @@ span::selection {
     justify-content: flex-start;
     transform: translateX(130%);
     opacity: 0%;
-    animation: navbarAppear 2s ease-in normal forwards;
-    animation: navbarSlideIn 1s ease-out normal backwards;
+    animation: navbarSlideIn 1s ease-out normal forwards;
     pointer-events: none;
     background-color: #ff695e;
 }
@@ -172,12 +171,16 @@ span::selection {
     color: white;
     font-size: 15px;
     font-family: 'DM Serif Display', serif;
+    pointer-events: all;
     width: 100%;
     height: 100%;
 }
 
 .slideoutInfoBlock:hover {
     background-color: #d3564d;
+}
+.slideoutInfoBlock:hover ~ .slideout {
+    transform: translateX(0%);
 }
 
 .topbar > .mobileNavBlock {
@@ -224,10 +227,6 @@ span::selection {
     100%{
         transform: translateX(130%);
     }
-}
-@keyframes navbarAppear {
-    0% {opacity: 0%;}
-    100% {opacity: 100%;}
 }
 
 @keyframes contactGrow {
