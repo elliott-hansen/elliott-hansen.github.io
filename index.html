@@ -27,7 +27,9 @@
                         <span id="_titlePeriod" style="color:#ff695e; font-size: 30px">.</span>
                         <a href="index.html" style="display:block; position: absolute; height:100%; width:100%"></a>
                     </div>
-                    <div class="navbar">
+
+                    <!-- Desktop navbar (TEMP DISABLED) -->
+                    <div class="navbar" style="display:none;"> 
                         <div class="infoBlock" style="animation-delay: 0.2s"> 
                             <span>About</span> 
                             <a style="display:block; position: absolute; height:100%; width:100%"></a>
@@ -53,6 +55,12 @@
                             <a href="" style="display:block; position: absolute; height:100%; width:100%"></a>
                         </div>
                     </div>
+
+                    <!-- Mobile Navbar; default: hidden -->
+                    <div id="_mobileNavBlock" class="mobileNavBlock">
+                        <span style="font-size: 35px;">⋯</span>
+                    </div>
+
                 </div>       
             </div>
 
@@ -71,6 +79,11 @@
                         <img class ="profileImage" src="me.png" style="width: 90%; border-radius: 50%; border: 5px solid #FF8A81; pointer-events: none;"/>
                         <div class="explosion" style="position: absolute; top:10%; height: 20vw; width: 20vw; border-radius: 50%; border: 3px solid #8f4a45; pointer-events: none;"></div>
                     </div>
+                </div>
+
+                <!-- Slide out navbar (mobile) -->
+                <div class="block" style="border: 2px solid white; position: absolute; width: 99vw; height: 90vh; flex-direction: column;">
+
                 </div>
 
             </div>

@@ -51,11 +51,11 @@
         
     }
     .topbar {
-        height: 25vh !important;;
+        height: 25vh !important;
     }
     #footer {
         width: 100%;
-        margin-top: 2vh;
+        margin-top: 0%;
     }
     #_profileBubble {
         width: 85vw !important;
