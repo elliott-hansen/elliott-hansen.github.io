@@ -67,7 +67,7 @@ span::selection {
         width: 100vw;
     }
     100% {
-        width: 70vw;
+        width: 80vw;
         align-self: center;
         justify-self: center;
     }
@@ -109,7 +109,7 @@ span::selection {
 }
 
 .photoBlock {
-    width: 64vw; 
+    width: 74vw; 
     /* border: 2px solid white;  */
     justify-content: space-evenly;
     opacity: 0%;

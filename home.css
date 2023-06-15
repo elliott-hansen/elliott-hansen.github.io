@@ -9,6 +9,7 @@ body {
     animation: blurBackground 2s ease-out normal forwards;
     background-position: fixed; 
     background-attachment: fixed;
+    resize: none;
 }
 
 body::-webkit-scrollbar {
