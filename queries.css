@@ -4,7 +4,8 @@
 
     body {
         background-size: 30%;
-        transition: 1.5s
+        transition: 1.5s;
+        overflow-x: hidden;
     }
 
     #_footer {
@@ -51,7 +52,7 @@
         
     }
     .topbar {
-        height: 25vh !important;
+        height: 10vh !important;
     }
     #footer {
         height:100vh !important;

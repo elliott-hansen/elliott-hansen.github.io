@@ -144,7 +144,7 @@ span::selection {
 }
 
 .slideout {
-    z-index: -5;
+    z-index: -15;
     position: static;
     display: flex;
     justify-content: center;
@@ -154,26 +154,48 @@ span::selection {
     width: 100vw; 
     height: 100vh; 
     flex-direction: column;
+    padding-top: 60px;
+    justify-content: flex-start;
     transform: translateX(-100%);
-    animation: navbarSlideIn 0.3s ease-out normal forwards;
+    animation: navbarSlideIn 5s ease-out normal backwards;
     pointer-events: none;
     background-color: #ff695e;
 }
 
+.slideout > .slideoutInfoBlock {
+    opacity: 0%;
+    animation: infoBlockDropDown 0.8s ease-out forwards;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 15px;
+    font-family: 'DM Serif Display', serif;
+    width: 100%;
+    height: 100%;
+}
+
+.slideoutInfoBlock:hover {
+    background-color: #9c3f38;
+}
+
 .topbar > .mobileNavBlock {
     animation: navBlockHoveroff 0.3s ease-out normal forwards;
-    z-index: 500;
+    z-index: 15;
     justify-self: flex-end !important;
     color: white;
     font-family: 'DM Serif Display', serif;
     display: flex;
     margin-left: auto !important;
-    height: 100%;
+    height: 5vh;
+    padding-bottom: 8px;
+    padding-top: 8px;
     justify-content: center;
     align-items: center;
-    background-color: #ff695e;
+    background-color: #d3564d;
     margin: 0%; 
-    width: 10vw;
+    border-end-start-radius: 50%;
+    width: 64px;
 }
 
 @keyframes navBlockHover {
@@ -194,6 +216,7 @@ span::selection {
 }
 .mobileNavBlock:hover {
     animation: navBlockHover 0.3s ease-out normal forwards;
+    
 }
 
 .mobileNavBlock:hover .slideout {
@@ -210,6 +233,9 @@ span::selection {
 }
 @keyframes navbarSlideIn {
     0%{
+        transform: translateX(0%);
+    }
+    95%{
         transform: translateX(0%);
     }
     100%{
