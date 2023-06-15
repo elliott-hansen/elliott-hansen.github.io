@@ -1,0 +1,63 @@
+body {
+    margin: 0%;
+    background-color: #7a3a3a;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0%;
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 100%;
+    }
+}
+
+.whitewall {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: slideIn 1.3s ease-out 0s 1 normal forwards;
+    background-color: #F7F7F7;
+    height: 100vh;
+    width: 50%;
+    transition: 0.25s
+}
+
+.whitewall > .contactBox {
+    display: flex;
+    width: 50%;
+    height: 75%;
+    position: absolute;
+    top: 15%;
+    transition: 0.25s
+}
+
+.contactBox > .contactText {
+    font-family: 'Bitter', serif;
+    color: #424242;
+    font-size: 75px;
+    position: absolute;
+    transition: 0.25s
+}
+
+.contactBox > .flavorText {
+    font-family: 'Bitter', serif;
+    top: 13%;
+    color: #424242;
+    font-size: 22px;
+    position: absolute;
+    transition: 0.25s
+}
+
+.contactBox > .infoBox {
+    display: flex;
+    align-self: center;
+    position: absolute;
+    top: 20%;
+    height: 70%;
+    width: 100%;
+    border: 3px solid #EBEBEB;
+    transition: 0.25s
+}

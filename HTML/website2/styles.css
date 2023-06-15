@@ -1,0 +1,87 @@
+body {
+    margin: 0%;
+    background-color: #2b2b33;
+}
+
+.title {
+    font-size: 1vw;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.menu {
+    display: flex;
+    background-color: #1f1f25;
+    border-right: 2px solid#73737a;
+    width: 15%;
+    height: 1920px;
+    transition: 0.7s;
+}
+
+nav {
+    margin: auto;
+    display: flex;
+    height: 60px;
+    background-color: #24242b;
+    border-top: 4px solid #73737a;
+    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav > .navBox {
+    
+    color: rgb(185, 185, 185);
+    text-align:center;
+    flex-flow: nowrap;
+    flex-grow: 1;
+    width:8%;
+    height:inherit;
+    line-height: inherit;
+    transition: 0.17s;
+}
+
+nav > .hamMenu {
+    color: rgb(185, 185, 185);
+    flex-flow: nowrap;
+    font-size: 15px;
+    text-align:center;
+    aspect-ratio: 1/1;
+    height: inherit;
+    transition: 0.17s;
+}
+
+nav > .titleBox {
+    color: rgb(185, 185, 185);
+    flex-flow: nowrap;
+    text-align:center;
+    width:15%;
+    height:inherit;
+    transition: 0.17s;
+}
+
+nav > .emptySpace {
+    color: rgb(185, 185, 185);
+    flex-flow: nowrap;
+    text-align:center;
+    width:50%;
+    height:auto;
+    transition: 0.17s;
+}
+
+
+.navBox:hover {
+    background-color: #2b2b33;
+}
+
+.hamMenu:hover {
+    background-color: #2b2b33;
+    
+}
+
+.titleBox:hover {
+    background-color: #2b2b33;
+}
+
+.hamMenu.hover ~ #menu {
+    background: #b6b6c7;
+}
