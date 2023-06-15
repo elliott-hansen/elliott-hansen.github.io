@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <body>
         <head>
 
             <meta charset="UTF-8">
             <title> Elliott N. Hansen </title>
             <link rel="stylesheet" href="photography_page.css"/>
-            <link rel="stylesheet" href="queries.css"/>
+            <link rel="stylesheet" href="photo_queries.css"/>
+            <link rel="shortcut icon" href="icon.png"/>
+            <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+
 
             <style>
                 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bitter&family=PT+Serif&family=DM+Serif+Display&display=swap');
@@ -20,27 +22,68 @@
             <!-- Head block -->
             <div class="block" style=" height: 8vh; align-items: center;">
                 <div class="topbar">
-                    <div class="title"> 
-                        <span style="font-size: 30px">Elliott H<span style="color:#ff695e; font-size: 30px">.</span></span>
+                    <div class="title" id="_title"> 
+                        <span id="_titleName" style="font-size: 30px">Elliott H</span>
+                        <span id="_titlePeriod" style="color:#ff695e; font-size: 30px">.</span>
                         <a href="index.html" style="display:block; position: absolute; height:100%; width:100%"></a>
                     </div>
-                    <div class="navbar">
-                        <div class="infoBlock" style="animation-delay: 0.2s"> <span>About</span> <a href="" style="display:block; position: absolute; height:100%; width:100%"></a></div>
-                        <div class="infoBlock" style="animation-delay: 0.4s"> <span>Experience</span> <a href="" style="display:block; position: absolute; height:100%; width:100%"></a></div>
-                        <div class="infoBlock" style="animation-delay: 0.6s"> <span>Photography</span> <a href="" style="display:block; position: absolute; height:100%; width:100%"></a></div>
-                        <div class="infoBlock" style="animation-delay: 0.8s"> <span>Smth Else</span> <a href="" style="display:block; position: absolute; height:100%; width:100%"></a></div>
+
+                    <!-- Desktop navbar (TEMP DISABLED) -->
+                    <div id="_navbar" class="navbar" > 
+                        <div class="infoBlock" style="animation-delay: 0.2s"> 
+                            <span>About</span> 
+                            <a style="display:block; position: absolute; height:100%; width:100%"></a>
+                        
+                        </div>
+                        <div class="infoBlock" style="animation-delay: 0.4s"> 
+                            <span>Experience</span> 
+                            <a style="display:block; position: absolute; height:100%; width:100%"></a>
+                        
+                        </div>
+                        <div class="infoBlock" style="animation-delay: 0.6s"> 
+                            <span>Photography</span> 
+                            <a href="photography.html" style="display:block; position: absolute; height:100%; width:100%"></a>
+                        
+                        </div>
+                        <div class="infoBlock" style="animation-delay: 0.8s"> 
+                            <span>Smth Else</span> 
+                            <a style="display:block; position: absolute; height:100%; width:100%"></a>
+                        
+                        </div>
                         <div class="contactBlock"> 
                             <span>Contact</span>
                             <a href="" style="display:block; position: absolute; height:100%; width:100%"></a>
                         </div>
                     </div>
+
+                    <!-- Mobile Navbar; default: hidden -->
+                    <div id="_mobileNavBlock" class="mobileNavBlock" style="display:none">
+                        <span style="font-size: 35px;">⋯</span>
+                        <!-- Slide out navbar (mobile) -->
+                        <div id="_slideout" class="slideout">
+                            <div class="slideoutInfoBlock" style="height: 25%">
+                                <span style="font-size: 55px"> About Me </span>
+                            </div>
+                            <div class="slideoutInfoBlock" style="height: 25%">
+                                <span style="font-size: 55px"> Experience </span>
+                            </div>
+                            <div class="slideoutInfoBlock" style="height: 25%">
+                                <span style="font-size: 55px"> Photography </span>
+                                <a href="photography.html" style="display:block; position: absolute; height:100%; width:100%; z-index: 50;"></a>
+                            </div>
+                            <div class="slideoutInfoBlock" style="height: 25%">
+                                <span style="font-size: 55px"> Smth Else </span>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>       
             </div>
 
             <!-- Body block -->
-            <div class="block" style="height: 200vh; flex-direction: row; justify-content: center;">
+            <div id = "_body" class="block" style="height: 100%; flex-direction: row; justify-content: center;">
 
-                <div class="photoBlock">
+                <div id="_photoBlock" class="photoBlock">
                     <div class="photoBox" style="margin-top: 8%">
                         <img src="pics/boldrock1.jpg"/>
                         <img src="pics/boldrock2.jpg"/>
@@ -62,22 +105,22 @@
             </div>
 
             <!-- Bottom Block -->
-            <div class="block" style="justify-content: center; align-items: center; flex-direction: row; margin-top: 45px;  width: 100%; height: 150px; background-color: #0F0F14;">
+            <div id="_footer" class="block" style="justify-content: center; align-items: center; flex-direction: row; margin-top: 45px;  width: 100%; height: 150px; background-color: #0F0F14;">
                 <div class="socialLinks" id="socialhub">
                     <div class="socialLink" id="social">
-                        <a href="https://www.instagram.com/elliott.n.hansen/?igshid=MjEwN2IyYWYwYw%3D%3D" style="display: block; height: 95%"><img src="insta.webp" style="height: 95%; width: 95%;"/></a>
+                        <a target="_blank" href="https://www.instagram.com/elliott.n.hansen/?igshid=MjEwN2IyYWYwYw%3D%3D" style="display: block; height: 95%"><img src="insta.webp" style="height: 25px; width: 25px;"/></a>
                     </div>
                     <div class="socialLink" id="social">
-                        <a href="https://www.linkedin.com/in/elliott-n-hansen/" style="display: block; height: 95%"><img src="linkedin.webp" style="height: 95%; width: 95%;"/></a>
+                        <a target="_blank" href="https://www.linkedin.com/in/elliott-n-hansen" style="display: block; height: 95%"><img src="linkedin.webp" style="height: 25px; width: 25px;"/></a>
                     </div>
                     <div class="socialLink" id="social">
-                        <a href="snapchat.html" style="display: block; height: 95%"><img src="snap.png" style="height: 95%; width: 95%;"/></a>
+                        <a href="snapchat.html" style="display: block; height: 95%"><img src="snap.png" style="height: 25px; width: 25px;"/></a>
                     </div>
                     <div class="socialLink" id="social">
-                        <a href="https://github.com/elliott-hansen" style="display: block; height: 95%"><img src="github.png" style="height: 95%; width: 95%;"/></a>
+                        <a target="_blank" href="https://github.com/elliott-hansen" style="display: block; height: 95%"><img src="github.png" style="height: 25px; width:25px;"/></a>
                     </div>
                     <div class="socialLink" id="social">
-                        <a href="photography-de.html" style="display: block; height: 95%;"><img src="greatb.png" style="height: 95%; width: 100%;"/></a>
+                        <a href="index-de.html" style="display: block; height: 95%;"><img src="greatb.png" style="height: 25px; width: 30px;"/></a>
                     </div>
                 </div>
             </div>
@@ -87,7 +130,6 @@
         <script src="Javascript/main.js">
 
         </script>
-
 
     </body>
 </html>

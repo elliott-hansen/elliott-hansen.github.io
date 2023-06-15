@@ -192,7 +192,7 @@ span::selection {
 
 .topbar > .navbar {
     /* outline: 2px solid #3E3C4E; */
-    animation: growNavBar 3s ease-out 1.8s normal forwards;
+    animation: growNavBar 3s ease-out 0.9s normal forwards;
     color: white;
     font-size: 18px;
     font-family: 'DM Serif Display', serif;
@@ -232,8 +232,8 @@ span::selection {
     /* border: 3px solid #507461; */
     display: flex;
     padding: 2px;
-    padding-left: 4px;
-    padding-right: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
     width: 115px;
     align-items: center;
     justify-content: space-evenly;

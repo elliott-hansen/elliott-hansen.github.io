@@ -157,7 +157,7 @@ span::selection {
     flex-direction: column;
     padding-top: 60px;
     justify-content: flex-start;
-    transform: translateX(100%);
+    transform: translateX(130%);
     opacity: 0%;
     animation: navbarAppear 2s ease-in normal forwards;
     animation: navbarSlideIn 1s ease-out normal backwards;
@@ -208,7 +208,7 @@ span::selection {
 
 @keyframes navbarSlideOut {
     0%{
-        transform: translateX(100%);
+        transform: translateX(130%);
     }
     100%{
         transform: translateX(0%);
@@ -222,7 +222,7 @@ span::selection {
         transform: translateX(0%);
     }
     100%{
-        transform: translateX(100%);
+        transform: translateX(130%);
     }
 }
 @keyframes navbarAppear {

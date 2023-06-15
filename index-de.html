@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <body>
-
         <head>
 
             <meta charset="UTF-8">
             <title> Elliott N. Hansen </title>
             <link rel="stylesheet" href="home.css"/>
             <link rel="stylesheet" href="queries.css"/>
+            <link rel="shortcut icon" href="icon.png"/>
+            <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+
 
             <style>
                 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bitter&family=PT+Serif&family=DM+Serif+Display&display=swap');
@@ -21,33 +22,82 @@
             <!-- Head block -->
             <div class="block" style=" height: 8vh; align-items: center;">
                 <div class="topbar">
-                    <div class="title"> 
-                        <span style="font-size: 30px">Elliott H<span style="color:#ff695e; font-size: 30px">.</span></span>
-                        <a href="index-de.html" style="display:block; position: absolute; height:100%; width:100%"></a>
+                    <div class="title" id="_title"> 
+                        <span id="_titleName" style="font-size: 30px">Elliott H</span>
+                        <span id="_titlePeriod" style="color:#ff695e; font-size: 30px">.</span>
+                        <a href="index.html" style="display:block; position: absolute; height:100%; width:100%"></a>
                     </div>
-                    <div class="navbar">
-                        <div class="infoBlock" style="animation-delay: 0.2s"> <span>Über mich</span> <a href="" style="display:block; position: absolute; height:100%; width:100%"></a></div>
-                        <div class="infoBlock" style="animation-delay: 0.4s"> <span>Erfahrungen</span> <a href="" style="display:block; position: absolute; height:100%; width:100%"></a></div>
-                        <div class="infoBlock" style="animation-delay: 0.6s"> <span>Fotografie</span> <a href="photography-de.html" style="display:block; position: absolute; height:100%; width:100%"></a></div>
-                        <div class="infoBlock" style="animation-delay: 0.8s"> <span>'was noch</span> <a href="" style="display:block; position: absolute; height:100%; width:100%"></a></div>
-                        <div class="contactBlock"> <span>Kontakt</span> <a href="" style="display:block; position: absolute; height:100%; width:100%"></a> </div>
+
+                    <!-- Desktop navbar (TEMP DISABLED) -->
+                    <div id="_navbar" class="navbar" > 
+                        <div class="infoBlock" style="animation-delay: 0.2s"> 
+                            <span>Über mich</span> 
+                            <a style="display:block; position: absolute; height:100%; width:100%"></a>
+                        
+                        </div>
+                        <div class="infoBlock" style="animation-delay: 0.4s"> 
+                            <span>Erfahrungen</span> 
+                            <a style="display:block; position: absolute; height:100%; width:100%"></a>
+                        
+                        </div>
+                        <div class="infoBlock" style="animation-delay: 0.6s"> 
+                            <span>Fotografie</span> 
+                            <a href="photography.html" style="display:block; position: absolute; height:100%; width:100%"></a>
+                        
+                        </div>
+                        <div class="infoBlock" style="animation-delay: 0.8s"> 
+                            <span>Noch was</span> 
+                            <a style="display:block; position: absolute; height:100%; width:100%"></a>
+                        
+                        </div>
+                        <div class="contactBlock"> 
+                            <span>Kontakt</span>
+                            <a href="" style="display:block; position: absolute; height:100%; width:100%"></a>
+                        </div>
                     </div>
+
+                    <!-- Mobile Navbar; default: hidden -->
+                    <div id="_mobileNavBlock" class="mobileNavBlock" style="display:none">
+                        <span style="font-size: 35px;">⋯</span>
+                        <!-- Slide out navbar (mobile) -->
+                        <div id="_slideout" class="slideout">
+                            <div class="slideoutInfoBlock" style="height: 25%">
+                                <span style="font-size: 55px"> Kontakt </span>
+                            </div>
+                            <div class="slideoutInfoBlock" style="height: 25%">
+                                <span style="font-size: 55px"> Über mich </span>
+                            </div>
+                            <div class="slideoutInfoBlock" style="height: 25%">
+                                <span style="font-size: 55px"> Erfahrungen </span>
+                            </div>
+                            <div class="slideoutInfoBlock" style="height: 25%">
+                                <span style="font-size: 55px"> Fotografie </span>
+                                <a href="photography.html" style="display:block; position: absolute; height:100%; width:100%; z-index: 50;"></a>
+                            </div>
+                            <div class="slideoutInfoBlock" style="height: 25%">
+                                <span style="font-size: 55px"> Noch was </span>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>       
             </div>
 
             <!-- Body block -->
-            <div class="block" style="height: 90vh; flex-direction: row; justify-content: flex-end;">
+            <div id = "_body" class="block" style="height: 90vh; flex-direction: row; justify-content: flex-end;">
 
 
                 <!-- Side info -->
                 <div class="block" style="display: flex; width: 55%; justify-content: center; align-items: center;">
-                    <span style="font-size: 45px;">Student, Entwickler, Abenteuerer<span style="color:#ff695e; font-size: 50px">.</span></span>
+                    <span id="_flavor" style="font-size: 45px;">Student, Entwickler, Abenteuerer<span style="color:#ff695e; font-size: 50px">.</span></span>
                 </div>
                 <!-- Side profile -->
-                <div class="block" style="display: flex; align-items: center; width: 45%; margin-right: 2.55vw;">
+                <div id="_profileBubble" class="block" style="display: flex; align-items: center; width: 50vw; justify-content: center; margin-top: 5%;">
                     <img class="profileArt" src="design3.png" style="width: 85%; pointer-events: none;"/>
-                    <img class ="profileImage" src="me.png" style="margin-left: -64%; margin-bottom: 18%; width: 45%; border-radius: 50%; border: 5px solid #FF8A81; pointer-events: none;"/>
-                    <div class="explosion" style="margin-left: -46%; margin-bottom: 18%; width: 45%; height: 42.5%; border-radius: 50%; border: 3px solid #8f4a45; pointer-events: none;"></div>
+                    <div style="margin-bottom: 5%; display: flex; flex-direction: row; justify-content: center; position: absolute; width: 25vw;">
+                        <img class ="profileImage" src="me.png" style="width: 90%; border-radius: 50%; border: 5px solid #FF8A81; pointer-events: none;"/>
+                        <div class="explosion" style="position: absolute; top:10%; height: 20vw; width: 20vw; border-radius: 50%; border: 3px solid #8f4a45; pointer-events: none;"></div>
+                    </div>
                 </div>
 
             </div>
@@ -59,7 +109,7 @@
                         <a target="_blank" href="https://www.instagram.com/elliott.n.hansen/?igshid=MjEwN2IyYWYwYw%3D%3D" style="display: block; height: 95%"><img src="insta.webp" style="height: 25px; width: 25px;"/></a>
                     </div>
                     <div class="socialLink" id="social">
-                        <a target="_blank" href="https://www.linkedin.com/in/elliott-n-hansen/" style="display: block; height: 95%"><img src="linkedin.webp" style="height: 25px; width: 25px;"/></a>
+                        <a target="_blank" href="https://www.linkedin.com/in/elliott-n-hansen/?locale=de_DE" style="display: block; height: 95%"><img src="linkedin.webp" style="height: 25px; width: 25px;"/></a>
                     </div>
                     <div class="socialLink" id="social">
                         <a href="snapchat-de.html" style="display: block; height: 95%"><img src="snap.png" style="height: 25px; width: 25px;"/></a>
@@ -75,6 +125,9 @@
 
         </div>
 
+        <script src="Javascript/main.js">
+
+        </script>
 
     </body>
 </html>
