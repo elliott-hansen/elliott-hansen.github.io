@@ -67,4 +67,10 @@
         display: none !important;
         width: 0px;
     }
+    #socialhub {
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 35vw;
+        height: 100%;
+    }
 }
