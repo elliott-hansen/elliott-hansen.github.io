@@ -43,6 +43,9 @@
 
 @media screen and ((pointer:coarse) or (pointer:none)) {
     html{
-        body{ width: 870;}
+        body{ width: 870 !important;}
+    }
+    .topbar {
+        height: 25vh !important;;
     }
 }
