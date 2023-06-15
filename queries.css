@@ -1,6 +1,6 @@
 @import "home.css";
 
-@media screen and ((max-width: 700px) or (pointer: none)) {
+@media screen and ((max-width: 1090px) or (pointer: none) or (pointer: coarse)) { /* If window is small */
 
     body {
         background-size: 30%;
@@ -8,7 +8,7 @@
     }
 
     #_footer {
-        height: 25vh !important;
+        height: 25% !important;
     }
 
     #socialhub {
@@ -20,4 +20,23 @@
     #social {
         padding-top: 8px;
     }
+
+    #_body {
+        flex-direction: column-reverse !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    #_profileBubble {
+        width: 65vw !important;
+    }
+
+    .profileImage {
+        width: 100% !important;
+    }
+
+    #_flavor {
+        text-align: center !important;
+    }
+
 }

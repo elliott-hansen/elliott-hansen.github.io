@@ -1,18 +1,14 @@
 
-function changeTitle(title) {
-    document.getElementById("_title").innerHTML = title;
-    document.getElementById("_period").style.fontSize = "30px";
-    document.getElementById("_period").style.color = "#ff695e";
-}
 
-function alterTitle() {
-    let defaultTitle = "Elliott H<span id='_period'>.</span>"
-    if (screen.matchMedia('(max-width: 700px)')) {
-        changeTitle("EH<span id='_period'>.</span>")
+function resizeTitle(newTitle) {
+    var query = window.matchMedia("(max-width: 870px)");
+    if(query.matches) {
+        document.getElementById("_titleName").innerHTML = "E";
     }
     else {
-        changeTitle(defaultTitle);
+        document.getElementById("_titleName").innerHTML = defaultTitle;
     }
 }
-
-window.addEventListener('resize', alterTitle);
+let defaultTitle = "Elliott H"
+resizeTitle("E");
+window.addEventListener('resize', resizeTitle)

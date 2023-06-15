@@ -67,7 +67,7 @@ span::selection {
     flex-direction: row;
     align-items: center;
     width: 100vw;
-    height: 50%;
+    height: 40px;
 }
 
 .block > .socialLinks {
@@ -83,6 +83,7 @@ span::selection {
     padding-bottom: 20px;
     height: 18%; 
     width: 15%;
+    
 }
 
 #social:hover {
@@ -129,12 +130,13 @@ span::selection {
 
 .topbar > .navbar {
     /* outline: 2px solid #3E3C4E; */
+    justify-self: flex-end !important;
     color: white;
     font-size: 18px;
     font-family: 'DM Serif Display', serif;
     display: flex;
     margin-right: 3vw;
-    margin-left: 50vw;
+    margin-left: auto;
     height: 100%;
     width: 700px;
     align-items: center;
