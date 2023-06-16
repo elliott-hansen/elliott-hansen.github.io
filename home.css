@@ -146,7 +146,7 @@ span::selection {
 .slideout {
     flex: none;
     overflow: hidden;
-    z-index: -15;
+    z-index: 0;
     position: static;
     display: flex;
     justify-content: center;
@@ -160,7 +160,6 @@ span::selection {
     justify-content: flex-start;
     transform: scaleX(0%);
     opacity: 0%;
-    animation: navbarSlideIn 0.1s ease-out normal forwards;
     pointer-events: none;
     background-color: #ff695e;
 }
@@ -177,13 +176,28 @@ span::selection {
     height: 100%;
 }
 
+.slideout > .closeBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    top: 0%;
+    right: 0%;
+}
+
+.slideout:has(> .closeBox:hover) {
+    animation: navbarSlideIn 0.1s ease-out normal forwards !important;
+}
+
 .slideoutInfoBlock:hover {
     background-color: #d3564d;
 }
 
 .topbar > .mobileNavBlock {
     overflow:hidden;
-    z-index: 15;
+    z-index: 1;
     justify-self: flex-end !important;
     color: white;
     font-family: 'DM Serif Display', serif;
@@ -198,9 +212,6 @@ span::selection {
     margin: 0%; 
     border-end-start-radius: 50%;
     width: 64px;
-}
-.mobileNavBlock:hover {
-    animation: navBlockHover 0.3s ease-out normal forwards;
 }
 
 .mobileNavBlock:hover .slideout {

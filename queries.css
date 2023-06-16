@@ -45,11 +45,10 @@
 
 @media screen and ((pointer:coarse) or (pointer:none)) {
     html{
-        body{ 
+        body { 
             width: 100vw !important; 
             height: 100vh !important;
-        }
-        
+        }    
     }
     .topbar {
         height: 10vh !important;
@@ -74,5 +73,9 @@
         justify-content: space-evenly;
         width: 35vw;
         height: 100%;
+    }
+    
+    #_title {
+        margin-left: 10%;
     }
 }
