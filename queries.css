@@ -36,6 +36,11 @@
     .profileImage {
         width: 150% !important;
     }
+    
+    .explosion {
+        height: 30vw !important;
+         width: 30vw !important;
+    }
 
     #_flavor {
         text-align: center !important;

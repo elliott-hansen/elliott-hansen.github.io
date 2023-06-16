@@ -312,13 +312,13 @@ span::selection {
 .profileArt {
     opacity: 0%;
     transform: translateX(300%);
-    animation: profileArtAppear 1.8s ease-in-out normal forwards;
+    animation: profileArtAppear 1.8s ease-in-out normal forwards, profileArtPulse 10.0s 1.8s infinite;
     z-index: -1;
 }
 
 .profileImage {
     opacity: 0%;
-    animation: profileImageAppear 0.8s ease-in-out normal forwards;
+    animation: profileImageAppear 0.8s ease-in-out normal forwards, profileArtPulse 10.0s 1.8s infinite;;
 }
 
 @keyframes explode {
@@ -362,6 +362,18 @@ span::selection {
     }
     100% {
         opacity: 100%;
+    }
+}
+
+@keyframes profileArtPulse {
+    0% {
+        transform: scale(100%);
+    }
+    70% {
+        transform: scale(105%);
+    }
+    100% {
+        transform: scale(100%);
     }
 }
 
