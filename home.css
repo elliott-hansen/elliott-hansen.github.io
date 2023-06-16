@@ -158,7 +158,7 @@ span::selection {
     flex-direction: column;
     padding-top: 60px;
     justify-content: flex-start;
-    transform: translateX(130%);
+    transform: scaleX(0%);
     opacity: 0%;
     animation: navbarSlideIn 0.1s ease-out normal forwards;
     pointer-events: none;
@@ -203,25 +203,27 @@ span::selection {
     animation: navBlockHover 0.3s ease-out normal forwards;
 }
 
-.mobileNavBlock:active .slideout {
-    animation: navbarSlideOut 0.2s ease-out normal forwards;
-    transform: translateX(0%);
+.mobileNavBlock:hover .slideout {
+    animation: navbarSlideOut 0.1s ease-out normal forwards;
 }
 
 @keyframes navbarSlideOut {
     0%{
-        transform: translateX(130%);
+        transform: scaleX(0%)
     }
     100%{
-        transform: translateX(0%);
+        transform: scaleX(100%);
     }
 }
 @keyframes navbarSlideIn {
     0%{
-        transform: translateX(0%);
+        transform: scaleX(100%);
+    }
+    95%{
+        transform: translateX(100%);
     }
     100%{
-        transform: translateX(130%);
+        transform: scaleX(0%);
     }
 }
 
