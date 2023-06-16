@@ -160,7 +160,7 @@ span::selection {
     justify-content: flex-start;
     transform: translateX(130%);
     opacity: 0%;
-    animation: navbarSlideIn 1s ease-out normal forwards;
+    animation: navbarSlideIn 0.1s ease-out normal forwards;
     pointer-events: none;
     background-color: #ff695e;
 }
@@ -179,9 +179,6 @@ span::selection {
 
 .slideoutInfoBlock:hover {
     background-color: #d3564d;
-}
-.slideoutInfoBlock:hover ~ .slideout {
-    transform: translateX(0%);
 }
 
 .topbar > .mobileNavBlock {
@@ -206,7 +203,7 @@ span::selection {
     animation: navBlockHover 0.3s ease-out normal forwards;
 }
 
-.mobileNavBlock:hover .slideout {
+.mobileNavBlock:active .slideout {
     animation: navbarSlideOut 0.2s ease-out normal forwards;
     transform: translateX(0%);
 }
@@ -221,9 +218,6 @@ span::selection {
 }
 @keyframes navbarSlideIn {
     0%{
-        transform: translateX(0%);
-    }
-    95%{
         transform: translateX(0%);
     }
     100%{

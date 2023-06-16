@@ -40,4 +40,3 @@ window.addEventListener("resize", changeToMobile);
 window.addEventListener("load", changeToMobile);
 window.addEventListener("load", resizeOps);
 document.getElementById("_mobileNavBlock").addEventListener("mouseover", displaySlideOut);
-document.getElementById("_mobileNavBlock").addEventListener("click", function() {document.getElementById("_slideout").style.transform = "translateX(130%)";});
