@@ -185,6 +185,7 @@ span::selection {
 }
 
 .topbar > .mobileNavBlock {
+    
     overflow:hidden;
     z-index: 15;
     justify-self: flex-end !important;
