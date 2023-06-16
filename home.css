@@ -144,6 +144,7 @@ span::selection {
 }
 
 .slideout {
+    flex: none;
     overflow: hidden;
     z-index: -15;
     position: static;
@@ -184,6 +185,7 @@ span::selection {
 }
 
 .topbar > .mobileNavBlock {
+    overflow:hidden;
     z-index: 15;
     justify-self: flex-end !important;
     color: white;
