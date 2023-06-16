@@ -188,7 +188,7 @@ span::selection {
     left: 0%;
 }
 
-.slideout:has(> .closeBox:active) {
+.slideout:has(> .closeBox:hover) {
     animation: navbarSlideIn 0.1s ease-out normal forwards !important;
 }
 
