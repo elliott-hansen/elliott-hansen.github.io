@@ -27,6 +27,7 @@
         justify-content: space-evenly !important;
         align-items: center !important;
         overflow-x: hidden;
+        overflow-y: hidden;
     }
 
     #_profileBubble {
