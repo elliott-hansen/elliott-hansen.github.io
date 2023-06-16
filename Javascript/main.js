@@ -25,11 +25,6 @@ function changeToMobile() {
     }
 }
 
-function displaySlideOut(){
-    document.getElementById("_slideout").style.opacity = "100%";
-    document.getElementById("_slideout").style.pointerEvents = "all";
-}
-
 
 resizeOps();
 changeToMobile();
@@ -39,4 +34,3 @@ window.addEventListener('resize', resizeTitle);
 window.addEventListener("resize", changeToMobile);
 window.addEventListener("load", changeToMobile);
 window.addEventListener("load", resizeOps);
-document.getElementById("_mobileNavBlock").addEventListener("mouseover", displaySlideOut);
