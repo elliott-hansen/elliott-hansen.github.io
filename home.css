@@ -159,6 +159,7 @@ span::selection {
     padding-top: 60px;
     justify-content: flex-start;
     transform: scaleX(0%);
+    transform: translateX(100%);
     opacity: 0%;
     pointer-events: none;
     background-color: #ff695e;
@@ -184,10 +185,10 @@ span::selection {
     width: 64px;
     height: 64px;
     top: 0%;
-    right: 0%;
+    left: 0%;
 }
 
-.slideout:has(> .closeBox:hover) {
+.slideout:has(> .closeBox:active) {
     animation: navbarSlideIn 0.1s ease-out normal forwards !important;
 }
 
@@ -220,10 +221,12 @@ span::selection {
 
 @keyframes navbarSlideOut {
     0%{
-        transform: scaleX(0%)
+        transform: scaleX(0%);
+        transform: translateX(100%);
     }
     100%{
         transform: scaleX(100%);
+        transform: translateX(0%);
     }
 }
 @keyframes navbarSlideIn {
