@@ -26,8 +26,10 @@ function changeToMobile() {
 }
 
 function displaySlideOut() {
+    console.log("A");
     document.getElementById("_slideout").style.opacity = "100%";
     document.getElementById("_slideout").style.pointerEvents = "all";
+    disableTitle();
 }
 
 resizeOps();

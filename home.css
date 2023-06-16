@@ -159,7 +159,6 @@ span::selection {
     padding-top: 60px;
     justify-content: flex-start;
     transform: scaleX(0%);
-    transform: translateX(100%);
     opacity: 0%;
     pointer-events: none;
     background-color: #ff695e;
@@ -178,6 +177,7 @@ span::selection {
 }
 
 .slideout > .closeBox {
+    z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -222,19 +222,14 @@ span::selection {
 @keyframes navbarSlideOut {
     0%{
         transform: scaleX(0%);
-        transform: translateX(100%);
     }
     100%{
         transform: scaleX(100%);
-        transform: translateX(0%);
     }
 }
 @keyframes navbarSlideIn {
     0%{
         transform: scaleX(100%);
-    }
-    95%{
-        transform: translateX(100%);
     }
     100%{
         transform: scaleX(0%);
