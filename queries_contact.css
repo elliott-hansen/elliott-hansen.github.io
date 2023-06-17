@@ -35,4 +35,11 @@
         width: 100vw !important;
         height: 80vh !important;
     }
+    #_bodyInner {
+        width: 95% !important;
+    }
+
+    #_email {
+        font-size: 8vw;
+    }
 }
