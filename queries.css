@@ -84,4 +84,8 @@
     #_title {
         margin-left: 5%;
     }
+
+    .profileImage {
+        width: 50% !important;
+    }
 }

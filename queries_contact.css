@@ -11,6 +11,9 @@
         width: 70vh !important;
         height: 70vh !important;
     }
+    body {
+        background-size: 30%;
+    }
 
 }
 
@@ -39,7 +42,5 @@
         width: 95% !important;
     }
 
-    #_email {
-        font-size: 8vw;
-    }
+    
 }
