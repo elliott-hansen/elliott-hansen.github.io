@@ -7,6 +7,8 @@
             <title> Elliott N. Hansen </title>
             <link rel="stylesheet" href="home.css"/>
             <link rel="stylesheet" href="queries.css"/>
+            <link rel="stylesheet" href="queries_contact.css"/>
+            <link rel="stylesheet" href="contact.css"/>
             <link rel="shortcut icon" href="icon.png"/>
             <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
 
@@ -20,7 +22,7 @@
         <div class="main">
 
             <!-- Head block -->
-            <div class="block" style=" height: 8vh; align-items: center;">
+            <div id="_header" class="block" style="z-index: 3; height: 8vh; align-items: center; width: 100vw">
                 <div class="topbar">
                     <div class="title" id="_title"> 
                         <span id="_titleName" style="font-size: 30px">Elliott H</span>
@@ -52,7 +54,7 @@
                         </div>
                         <div class="contactBlock"> 
                             <span>Contact</span>
-                            <a href="contact.html" style="display:block; position: absolute; height:100%; width:100%"></a>
+                            <a href="" style="display:block; position: absolute; height:100%; width:100%"></a>
                         </div>
                     </div>
 
@@ -66,7 +68,6 @@
                             </div>
                             <div class="slideoutInfoBlock" style="height: 25%">
                                 <span style="font-size: 55px"> Contact </span>
-                                <a href="contact.html" style="display:block; position: absolute; height:25%; width:100%;"></a>
                             </div>
                             <div class="slideoutInfoBlock" style="height: 25%">
                                 <span style="font-size: 55px"> About Me </span>
@@ -87,29 +88,45 @@
                 </div>       
             </div>
 
-            <!-- Body block -->
-            <div id = "_body" class="block" style="height: 92vh; flex-direction: row; justify-content: flex-end;">
-
-
-                <!-- Side info -->
-                <div class="block" style="display: flex; width: 55%; justify-content: center; align-items: center; overflow-y: visible;">
-                    <span id="_flavor" style="font-size: 45px; display: block; text-align: center;">Student, Engineer, Explorer<span style="color:#ff695e; font-size: 50px">.</span>
-                        <!-- <br> Proud Hoo <img style="position: static; width: 5%;"src="uva2.webp"/> -->
-                    </span>
-                </div>
-                <!-- Side profile -->
-                <div id="_profileBubble" class="block" style="display: flex; align-items: center; width: 50vw; justify-content: center;">
-                    <img class="profileArt" src="design3.png" style="width: 85%; pointer-events: none; position:static"/>
-                    <div style="margin-bottom: 5%; display: flex; flex-direction: row; justify-content: center; position: absolute; width: 25vw;">
-                        <img class ="profileImage" src="me.png" style="width: 90%; border-radius: 50%; border: 5px solid #FF8A81; pointer-events: none;"/>
-                        <div class="explosion" style="position: absolute; top:10%; height: 20vw; width: 20vw; border-radius: 50%; border: 3px solid #8f4a45; pointer-events: none;"></div>
+            <!-- Body Block -->
+            <div id = "_body" class="block" style="height: 92vh; flex-direction: row; justify-content: center; flex-direction: row;">
+                <div id="_bodyInner" class="block" style="display: flex;width: 60%; position: absolute; height: 100vh; top: 0%; justify-content: center; justify-items: center; overflow: hidden;">
+                    <img class="contactBubble" src="contactbubble.png" style="position: absolute; width: 108%; z-index: 0; align-self: center;"/>
+                    <img class="floaters" src="floaters.png" style="position: absolute; width: 108%; z-index: 1; align-self: center;"/>
+                    <div class="contactWindow" style="align-self: center; display: flex; justify-content: center; align-items: center;">
+                        <div class = "block" style="flex-direction: column; display: flex; width: 70%; height: 90%">
+                            <span style="font-family:'Bebas Neue', sans-serif; ;font-size: 95px; text-shadow: 1px 1px 2px black;">
+                                Reach out.
+                            </span>
+                            <span style="font-family:'Bebas Neue', sans-serif; ;font-size: 35px; text-shadow: 1px 1px 2px black;">
+                                I'd love to hear from you.
+                            </span>
+                            <div class = "block" style="flex-direction: row; display: flex; height: 25%; width: 100%; margin-top: 20%; justify-content: center; align-items: center;">
+                                <span style="font-family:'Bebas Neue', sans-serif; ;font-size: 25px; text-shadow: 1px 1px 2px black;">
+                                    Send me an email at:
+                                    <br>
+                                    <span style="font-size: 45px;">
+                                    enh4bn@virginia.edu
+                                    </span>
+                                </span>
+                            </div>
+                            <div class = "block" style="flex-direction: column; display: flex; width: 100%; height: 30%; margin-top: 15%">
+                                <span style="font-family:'Bebas Neue', sans-serif; ;font-size: 35px; text-shadow: 1px 1px 2px black;">
+                                    Or contact me on social media below.
+                                </span>
+                                <div class = "block" style="flex-direction: column; display: flex; width: 100%; height: 50%; justify-content: center; align-items: center;">
+                                    <span style="font-family:'Bebas Neue', sans-serif; ;font-size: 35px; text-shadow: 1px 1px 2px black;">
+                                        ▼
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
             </div>
 
             <!-- Bottom Block -->
-            <div id="_footer" class="block" style="justify-content: center; align-items: center; flex-direction: row; width: 100%; height: 150px; background-color: #0F0F14;">
+            <div id="_footer" class="block" style=" z-index: 1; justify-content: center; align-items: center; flex-direction: row;  width: 100%; height: 150px; background-color: #0F0F14;">
                 <div class="socialLinks" id="socialhub">
                     <div class="socialLink" id="social">
                         <a target="_blank" href="https://www.instagram.com/elliott.n.hansen/?igshid=MjEwN2IyYWYwYw%3D%3D" style="display: block; height: 95%"><img src="insta.webp" style="height: 25px; width: 25px;"/></a>

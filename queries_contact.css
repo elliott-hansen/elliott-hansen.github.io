@@ -1,0 +1,38 @@
+@import "home.css";
+@import "contact.css";
+
+/* If window is small */
+@media screen and (max-width: 1450px) {
+
+    #_bodyInner {
+        width: 65% !important;
+    }
+    .contactWindow {
+        width: 70vh !important;
+        height: 70vh !important;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+
+    #_bodyInner {
+        width: 95% !important;
+    }
+    .contactWindow {
+        border-radius: 15px !important;
+        width: 100vw !important;
+        height: 80vh !important;
+    }
+
+}
+
+/* If on mobile */
+@media screen and ((pointer:coarse) or (pointer:none)) { 
+
+    .contactWindow {
+        border-radius: 15px !important;
+        width: 100vw !important;
+        height: 80vh !important;
+    }
+}

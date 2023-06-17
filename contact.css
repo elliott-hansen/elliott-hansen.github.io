@@ -1,0 +1,100 @@
+.floaters {
+    opacity: 0%;
+    filter: blur(2px);
+    animation: floatersArrive 2s 3s normal forwards, floatersFloat 19s infinite normal forwards;
+}
+
+@keyframes floatersArrive {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+@keyframes floatersFloat {
+ 0% {
+    transform: translateY(3%);
+ }
+ 50% {
+    transform: translateY(0%);
+ }
+ 70% {
+    transform: translateY(-2%);
+ }
+ 100% {
+    transform: translateY(3%);
+ }
+}
+
+.contactBubble {
+    transform: translateY(350%);
+    animation: bubbleArrive 3s ease-out normal forwards, bubbleBlur 2s 4s normal forwards, bubbleFloat 10s 5s infinite normal forwards;
+}
+
+@keyframes bubbleFloat {
+    0% {
+        transform: translateY(0%);
+     }
+     50% {
+        transform: translateY(1%);
+     }
+     70% {
+        transform: translateY(-1%);
+     }
+     100% {
+        transform: translateY(0%);
+     }
+}
+
+@keyframes bubbleArrive {
+    0% {
+        transform: translateY(350%);
+    }
+    80% {
+        transform: translateY(-3%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes headerFade {
+    0% {
+        background-color: #00000000;
+    }
+    100% {
+        backdrop-filter: blur(20px) brightness(90%);
+        background: linear-gradient(to bottom, #777c880e 0%, transparent 100%);
+    }
+}
+
+@keyframes bubbleBlur {
+    0% {
+        filter: blur(0px);
+    }
+    100% {
+        filter: blur(5px);
+    }
+}
+
+.contactWindow {
+    opacity: 0%;
+    z-index: 3;
+    position: relative;
+    width: 40vw; 
+    height: 40vw; 
+    background-color: #7467662f;
+    animation: contactWindowAppear 1.0s 3s normal forwards;
+}
+
+@keyframes contactWindowAppear {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+        border-radius: 25%;
+        backdrop-filter: blur(8px) brightness(90%);
+    }
+}
