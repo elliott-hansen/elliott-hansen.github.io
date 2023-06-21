@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=PT+Serif&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Bebas+Neue&family=Fira+Code&family=Fjalla+One&family=PT+Serif&family=Philosopher&family=Tsukimi+Rounded:wght@300;400&family=Vollkorn&display=swap');
     </style>
     <link rel="stylesheet" href="homepage.css"/>
     <meta charset="UTF-8">
@@ -11,33 +11,70 @@
 </head>
 
 
-    <body>
+    <body style="overflow-x: hidden;">
         
-        <div class="mainblock">
-            <!-- Topbar -->
-            <div class="topbar" style="height: 250px">
-                <div class="nameblock">
-                     <strong> Elliott H. </strong>
+        <div id = "_topbar" class="topbar" style="height: 100px">
+            <div class="navbar">
+                <div class="navblocklink" style="animation-delay: 1.1s">
+                    <span id="_navlink"> Contact </span>
+                </div>
+                <div class="navblocklink" style="animation-delay: 1.2s">
+                    <span id="_navlink"> Projects </span>
+                </div>
+                <div class="navblocklink" style="animation-delay: 1.3s;">
+                    <span id="_navlink"> Home </span>
                 </div>
             </div>
-            <div class="topbar" style="border-bottom: none">
-                <div class="navbar">
-                    <div class="navblocklink" style="animation-delay: 1.1s">
-                        <span> Contact </span>
-                    </div>
-                    <div class="navblocklink" style="animation-delay: 1.2s">
-                        <span> Projects </span>
-                    </div>
-                    <div class="navblocklink" style="animation-delay: 1.3s;">
-                        <span> Home </span>
-                    </div>
-                </div>
-            </div>
+        </div>
+
+        <div id="_scrollTo" style="margin-top: 100vh; background-color: #e0d4cd; width: 100vw; height: 300vh;"></div>
+        <div class="mainblock" style=" align-items: center; z-index: 10;">
 
             <!-- Hello Block -->
             <div class="helloblock">
+                <div id="_hellotext" style="height: 100%; width: 50%; display: grid; align-items: center; justify-content: center;">
+                    <span style="text-align: center; line-height: 65px; font-family: 'Abril Fatface', cursive; font-size: 150px">Hey!<p id="_innerText" style="font-family: 'Fjalla One', sans-serif; font-size: 50px;"><br> My name is <span id="_myName" style="font-family: 'Fjalla One', sans-serif; font-size: 50px;">Elliott</span> Hansen. </p> </span>
+                </div>
+                <div style=" height: 100%; width: 50%; display: flex; align-items: center; justify-content: center;">
+                    <img id = "_bubble" style="width:35%; position:absolute;"src="assets/scribble1.png"/>
+                    <!-- <img id = "_bubblefloaters" style="width:35%; position:absolute;"src="assets/floaters.png"/> -->
+                </div>
+            </div>
+            <div style="height: 95px; width: 95px; display: grid; align-items: center; justify-content: center;">
+                <span id="_aboutMeArrow" style="text-align: center"> about me <br> ▼ </a></span>
+                <a href = "#_scrollTo" style="position: absolute; display:block; width: 95px; height: 95px;"></a>
             </div>
 
+        </div>
+
+        <div class="mainblock" style="right: 3.5vw; margin-top: 100vh; width: 46.5vw"> 
+            <div style = "width: 75%; align-self: center; margin-top: 25%; height: 70%; position: absolute; left: -90%">
+                <span style=" font-family: 'Vollkorn', serif; font-size: 155px"> I'M A STUDENT. </span>
+            </div>
+        </div>
+
+        <div class="mainblock" style="left: 3.5vw; margin-top: 200vh; width: 46.5vw">
+            <div style = "width: 75%; align-self: center; margin-top: 20%; height: 70%; position: absolute; right: -85%">
+                <!-- <span id = "_engineerTitle" style=" font-family: 'Fira Code', monospace; font-size: 25px; line-height: 65px;">
+                        <span style="filter: blur(2px);">void displayTitle() { <br>
+                        &nbsp char * title = <br> "</span><span style="font-size: 79px; color: rgb(255, 255, 255); ;">I'M AN ENGINEER.</span><span style="filter: blur(2px);">"; <br>
+                        &nbsp for (int i = 0; title[i] != '\0'; ++i) { <br>
+                            &nbsp &nbsp printf("%c", title[i]); <br>
+                            &nbsp } <br>
+                            &nbsp puts("\n"); <br>
+                     } </span>
+                
+                </span> -->
+                <span style=" font-family: 'Fira Code', monospace; font-size: 155px;">
+                    I'M AN ENGINEER.
+                </span>
+            </div>
+        </div>
+
+        <div class="mainblock" style="right: 3.5vw; margin-top: 300vh; width: 46.5vw"> 
+            <div style = "width: 75%; align-self: center; margin-top: 15%; height: 70%; position: absolute; left: -90%">
+                <span style="font-size: 230px"> I'm an Explorer.</span>
+            </div>
         </div>
 
         <!-- Sidebar -->
@@ -63,6 +100,7 @@
             </div>
         </div>
 
+        <script src="javascript/homepage.js"></script>
     </body>
 
 
