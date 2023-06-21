@@ -49,7 +49,7 @@
 
 }
 
-@media screen and ((pointer:coarse) or (pointer:none)) {
+@media screen and ((max-width: 1090px) and ((pointer:coarse) or (pointer:none))) {
     html{
         body { 
             width: 100vw !important; 

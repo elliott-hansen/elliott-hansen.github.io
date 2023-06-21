@@ -31,7 +31,7 @@
 }
 
 /* If on mobile */
-@media screen and ((pointer:coarse) or (pointer:none)) { 
+@media screen and ((max-width: 1090px) and ((pointer:coarse) or (pointer:none))) { 
 
     .contactWindow {
         border-radius: 15px !important;

@@ -1,0 +1,248 @@
+body {
+    margin: 0%;
+    display: grid;
+    background-color: #1e1a20
+}
+
+
+span {
+    font-size: 25px;
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+body::-webkit-scrollbar {
+    width: 0px;
+    background-color: rgb(0, 0, 0);
+}
+
+body::-webkit-scrollbar-thumb {
+    width: 5px;
+    background-color: #ffffff;
+}
+
+
+.mainblock {
+    top: 25px;
+    position: absolute;
+    display:flex;
+    flex-direction: column;
+    width: 80vw;
+    height: 200vh;;
+    justify-self: center;
+}
+
+.mainblock > .helloblock {
+    margin-top: 35px;
+    border: 2px solid white;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 100%;
+}
+
+.helloblock > .hellotext {
+    color: white;
+    font-family: 'PT Serif';
+    font-size: 350px;
+}
+
+.mainblock > .topbar {
+    margin-top: 5px;
+    width: 100%;
+    height: 55px;
+    display: flex;
+    border-bottom: 2px solid rgba(211, 211, 211, 0.158);
+}
+
+.topbar > .nameblock {
+    font-family: 'Bebas Neue', sans-serif;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 35px;
+    width: 150px;
+    height: 100%;
+}
+
+.topbar > .navbar {
+    width: 40vw;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    height: 100%;
+    display: flex;
+    margin-left: auto;
+}
+
+.navblocklink {
+    opacity: 0%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 100%;
+}
+
+.navblocklink:hover {
+    border-bottom: 2px solid white;
+}
+
+.navbar input {
+    opacity: 0%;
+    width: 0%;
+    height: 0%;
+}
+
+.navcheck:checked ~ .navblocklink {
+    animation: navblocklinkAppear 0.3s normal forwards;
+}
+
+@keyframes navblocklinkAppear {
+    0% {
+        transform: translateX(100%);
+        opacity: 0%;
+    }
+    50% {
+        opacity: 0%;
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 100%;
+    }
+}
+.nameblock:hover {
+    border-bottom: 2px solid white;
+}
+
+.navbar > .navblock {
+    font-family: 'Bebas Neue', sans-serif;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 35px;
+    width: 55px;
+    height: 100%;
+    transition: 0.2s;
+}
+
+.navblock:checked {
+    transform: rotateZ(90deg);
+}
+
+.sidebar {
+    border-left: 2px solid rgba(211, 211, 211, 0.158);
+    transform: scaleX(0%) translateX(100%);
+    animation: sidebarSlidein 1.2s normal forwards;
+    height: 100vh;
+    width: 55px;
+    justify-self: flex-end;
+    background-color: #36363604;
+    backdrop-filter: blur(3px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebarHitbox {
+    position: fixed;
+    overflow:hidden;
+    height: 100vh;
+    width: 55px;
+    justify-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebarArrow {
+    animation: ArrowFadeIn 0.5s 1s normal forwards;
+    position: absolute;
+    opacity: 0%;
+    color: rgba(211, 211, 211, 0.39);
+    transform: rotateZ(-90deg);
+    font-size: 15px;
+}
+
+@keyframes sidebarSlideout {
+    0% {
+        transform: scaleX(0%) translateX(100%);
+    }
+    20% {
+        transform: scaleX(100%);
+    }
+    100% {
+        transform: scaleX(100%) translateX(0%);
+    }
+}
+
+@keyframes sidebarSlidein {
+    0% {
+        transform: scaleX(100%) translateX(0%);
+    }
+    20% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: scaleX(0%) translateX(100%);
+    }
+}
+
+.sidebarHitbox:hover .sidebar {
+    animation: sidebarSlideout 0.5s normal forwards;
+}
+
+.sidebarHitbox:hover .sidebarArrow {
+    animation: ArrowFadeOut 0.2s normal forwards;
+}
+
+@keyframes ArrowFadeOut {
+    0% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+
+@keyframes ArrowFadeIn {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+.socialHub {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.socialHub > .socialLink {
+    filter: brightness(30%);
+    width: 50%;
+    height: 30px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s
+}
+
+.socialLink > img {
+    width: 100%;
+}
+
+.socialLink:hover{
+    filter: brightness(100%);
+}
