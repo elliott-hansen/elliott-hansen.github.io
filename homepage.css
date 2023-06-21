@@ -95,7 +95,7 @@ body::-webkit-scrollbar-thumb {
     height: 0%;
 }
 
-.navcheck:checked ~ .navblocklink {
+.navblock:hover ~ .navblocklink {
     animation: navblocklinkAppear 0.3s normal forwards;
 }
 
@@ -122,13 +122,14 @@ body::-webkit-scrollbar-thumb {
     align-items: center;
     justify-content: center;
     color: white;
+    border: 2px solid white;
     font-size: 35px;
     width: 55px;
     height: 100%;
     transition: 0.2s;
 }
 
-.navblock:checked {
+.navblock:hover {
     transform: rotateZ(90deg);
 }
 
