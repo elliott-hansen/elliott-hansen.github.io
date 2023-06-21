@@ -348,3 +348,9 @@ body::-webkit-scrollbar-thumb {
     font-size: 25px; 
     line-height: 65px;
 }
+
+#_studentText > span {
+    font-family: 'Vollkorn', serif; 
+    font-size: 155px;
+    color: rgb(194, 92, 58);
+}
