@@ -47,14 +47,13 @@ body {
     flex-direction: row;
     width: 100%;
     height: 20%;
-    border-bottom: 2px solid gray;
+    border-bottom: 2px solid  #d8d2d2 ;
     /* border: 2px solid green; */
 }
 
 .BodyTrack > .BigImage {
-    margin-top: 143.2vh;
+    margin-top: 124vh;
     position: absolute !important;
-    z-index: 2;
     display: flex;
     flex-grow: 1;
     width: 100vw;
@@ -73,7 +72,7 @@ body {
 
 
 .BigImage > .StaticImage {
-    z-index: 2;
+    z-index: 4 !important;
     align-self: center !important;
     width: 100vw !important;
     height: 100vh;
@@ -93,6 +92,70 @@ body {
     flex-direction: column;
 }
 
+.ImageTextBlock > .InfoBlock {
+    align-self: center;
+    position: relative;
+    justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    width: 30%;
+
+}
+
+.InfoBlock > .InfoText {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+}
+
+.InfoText > span {
+    user-select: none;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 200;
+    font-size: 15px;
+    line-height: 5vh;
+    color: rgb(32, 32, 32);
+}
+
+.DeepInfoText {
+    height: 100%;
+    width: 30%;
+}
+
+.DeepInfoText > span {
+    user-select: none;
+    font-size: 16px;
+    font-family: 'Tajawal', sans-serif;
+}
+
+.ResumeDownload {
+    width: 155px;
+    height: 60px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: #d8d2d2;
+    transition: 0.3s;
+    border-radius: 3.5%;
+}
+
+.ResumeDownload:hover {
+    background-color: #9cada0;
+}
+
+.ResumeDownload:active {
+    transition: 0.1s;
+    background-color: #397048;
+}
+
+.ResumeDownload > a {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+}
 .TextBlock > span {
     user-select: none;
     opacity: 0%;
@@ -102,7 +165,6 @@ body {
     color: rgb(32, 32, 32);
     font-size: 185px;
     line-height: 20vh;
-    user-select: none;
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
@@ -127,7 +189,18 @@ body {
     justify-self: center;
     position: fixed;
     flex-direction: row;
-    z-index: 0;
+    z-index: 2;
+}
+
+.BotNav {
+    width: 90vw;
+    height: 55px;
+    display: flex;
+    justify-self: center;
+    position: fixed;
+    bottom: 25px;
+    flex-direction: row;
+    z-index: 2;
 }
 
 .TopNav > div {
@@ -144,7 +217,33 @@ body {
     font-family: 'Oswald', sans-serif;
 }
 
-.TopNav > .MenuWrapper {
+.TopNav > .LangSelector {
+    display: grid;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    height: 45%;
+    padding-bottom: 3px;
+    width: 35px;
+    justify-content: center;
+    color: rgb(32, 32, 32);
+    font-size: 14px;
+    font-weight: 200;
+    font-family: 'Oswald', sans-serif;
+}
+
+.LangSelector:hover {
+    border-bottom: 1px solid #d8d2d2;
+}
+
+.LangSelector > a {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+}
+
+.BotNav > .MenuWrapper {
+    margin-left: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -159,43 +258,10 @@ body {
     from {opacity: 0%; transform: translateX(100%)}
     to {opacity: 100%; transform: translateX(0%)}
 }
-/* .MenuWrapper > .Menu {
-    z-index: 4 !important;
-    width: 20px;
-    height: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-.Menu > div {
-    position: static;
-    align-self: center;
-    width: 20px;
-    height: 2px;
-    background-color: rgb(0, 0, 0);
-    transition: 0.2s;
-}
-
-.Menu:hover .MenuMidArm {
-    opacity: 0%;
-    margin: 0;
-    height: 0;
-}
-
-.Menu:hover .MenuTopArm {
-    transform: translateY(6px) rotateZ(-45deg);
-    margin: 0;
-}
-
-.Menu:hover .MenuBotArm {
-    transform: translateY(-6px) rotateZ(45deg);
-    margin: 0;
-} */
 
 .MenuWrapper > .MenuItem {
     user-select: none;
-    text-align: right;
+    text-align: left;
     font-family: 'Oswald', sans-serif;
     font-weight: 200;
     font-size: 13px;
@@ -215,6 +281,16 @@ body {
     overflow: hidden;
     width: 0%;
     animation: typewriter steps(26) 0.3s 3s normal forwards;
+}
+
+.BottomBlock {
+    z-index: 6;
+    width: 100vw;
+    height: 125px;
+    background-color: #d8d2d2;
+    position: absolute;
+    bottom: 0%;
+    transform: translateY(100%);
 }
 
 @keyframes typewriter {

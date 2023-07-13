@@ -6,12 +6,12 @@
     <title>Elliott Hansen</title>
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Asar&family=Cormorant+Unicase:wght@500;600&family=Kaisei+HarunoUmi:wght@700&family=Oswald:wght@400;600;700&family=Scheherazade+New:wght@500;600&family=Varela+Round&family=Yuji+Syuku&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Asar&family=Cormorant+Unicase:wght@500;600&family=Kaisei+HarunoUmi:wght@700&family=Oswald:wght@400;600;700&family=PT+Sans&family=Scheherazade+New:wght@500;600&family=Tajawal&family=Varela+Round&family=Yuji+Syuku&display=swap');
     </style> 
 
     <link rel="stylesheet" href="home.css">
 </head>
-<body>
+<body onload = "reAlignPage()">
 
     <div class="MainBlock" style="left: 0%">
         <!-- Top Nav -->
@@ -19,11 +19,14 @@
             <div class="NameBlock">
                 <span>ELLIOTT HANSEN</span>
             </div>
-            <div class = "MenuWrapper" style="margin-left: auto">
-                <div class="MenuItem">INSTAGRAM</div>
-                <div class="MenuItem">LINKEDIN</div>
-                <div class="MenuItem">EMAIL</div>
-            </div>
+            <div class="LangSelector" style="margin-left: auto">
+                EN.
+                <a href="index.html"></a>
+                </div>
+            <div class="LangSelector" style="color: #cfc7c7 ">
+                <a href="index-de.html"></a>
+                DE.
+                </div>
         </div>
 
         <div id = "scrollTrack" class="BodyTrack">
@@ -37,12 +40,135 @@
             <div id = "bigImage" class="BigImage">
                 <img class="StaticImage" src="uva.png">
             </div>
-            <div class="ImageTextBlock" style="height: 720px; margin-top: 180vh; width: 90vw; align-self: center">
+
+            <!-- PROF. EXPERIENCE -->
+            <div class="ImageTextBlock" style="gap: 125px; height: 620px; margin-top: 180vh; width: 90vw; align-self: center">
+                <div class = "InfoBlock">
+                    <div class="InfoText" style="height: 35px">
+                        <span>PROFESSIONAL EXPERIENCE</span>
+                    </div>
+                    <div class="InfoText" style="height: 55%; margin-top: 35px">
+                        <span style="font-family: 'Scheherazade New', serif; font-size: 60px;">
+                            Full-Time Student and Freelance Web Developer
+                        </span> 
+                    </div>
+                    <div class="InfoText" style="height: 35px; margin-top: auto;">
+                        <span style="font-size: 10px;">2020 - PRESENT</span> 
+                    </div>
+                </div>
+                <div class = "InfoBlock" style=" width: 100%; ">
+                    <div class="InfoText" style="height: 35px">
+    
+                    </div>
+                    <div class="InfoText" style="height: 25%; margin-top: 35px">
+                        <span style="font-family: 'Scheherazade New', serif; font-size: 60px">
+                            TITLE INFO
+                        </span> 
+                        <div class="ResumeDownload">
+                            RESUME
+                            <a href="Resume - Elliott Hansen.pdf" download></a>
+                        </div>
+                    </div>
+                    <div class="InfoText" style="height: 40%; margin-top: 35px; flex-direction: row; gap: 35px">
+                        <div class="DeepInfoText">
+                            <span> After transferring from the College of William & Mary in 2022. I began the rest of my time in University at the prestigious University of Virginia in Charlottesville, Virginia. A place that seemingly can't get enough of their founder and the third president of the United States, Thomas Jefferson.</span>
+                        </div>
+                        <div class="DeepInfoText">
+                            <span> Studying Computer Science here is an incredible experience and privelage and has lead me down a path towards a career in Software Engieering and Full-Stack Development. Go Hoos!</span>
+                        </div>
+                        <div class="DeepInfoText" style="display: flex; justify-content: center;">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- UVA EDUCATION -->
+            <div class="ImageTextBlock" style="gap: 125px; height: 620px;; width: 90vw; align-self: center">
+                <div class = "InfoBlock">
+                    <div class="InfoText" style="height: 35px">
+                        <span>EDUCATION</span> <span style="font-size: 10px"> 2 - 2 </span> 
+                    </div>
+                    <div class="InfoText" style="height: 25%; margin-top: 35px">
+                        <span style="font-family: 'Scheherazade New', serif; font-size: 60px;">
+                            University of Virginia
+                        </span> 
+                    </div>
+                    <div class="InfoText" style="height: 35px; margin-top: auto;">
+                        <span style="font-size: 10px;">2022-2024</span> 
+                    </div>
+                </div>
+                <div class = "InfoBlock" style=" width: 100%; ">
+                    <div class="InfoText" style="height: 35px">
+                        <span>COMPUTER SCIENCE</span>
+                    </div>
+                    <div class="InfoText" style="height: 25%; margin-top: 35px">
+                        <span style="font-family: 'Scheherazade New', serif; font-size: 60px">
+                            A World-Class Education at Thomas Jefferon's University.
+                        </span> 
+                    </div>
+                    <div class="InfoText" style="height: 40%; margin-top: 35px; flex-direction: row; gap: 35px">
+                        <div class="DeepInfoText">
+                            <span> After transferring from the College of William & Mary in 2022. I began the rest of my time in University at the prestigious University of Virginia in Charlottesville, Virginia. A place that seemingly can't get enough of their founder and the third president of the United States, Thomas Jefferson.</span>
+                        </div>
+                        <div class="DeepInfoText">
+                            <span> Studying Computer Science here is an incredible experience and privelage and has lead me down a path towards a career in Software Engieering and Full-Stack Development. Go Hoos!</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- WM EDUCATION -->
+            <div class="ImageTextBlock" style="gap: 125px; height: 620px;; width: 90vw; align-self: center">
+
+                <div class = "InfoBlock">
+                    <div class="InfoText" style="height: 35px">
+                         <span>EDUCATION</span> <span style="font-size: 10px"> 1 - 2 </span> 
+                    </div>
+                    <div class="InfoText" style="height: 25%; margin-top: 35px">
+                        <span style="font-family: 'Scheherazade New', serif; font-size: 60px">
+                            The College of William & Mary
+                        </span> 
+                   </div>
+                   <div class="InfoText" style="height: 35px; margin-top: auto;">
+                    <span style="font-size: 10px;">2020-2022</span> 
+                    </div>
+                </div>
+
+
+                <div class = "InfoBlock" style=" width: 100%; ">
+                    <div class="InfoText" style="height: 35px">
+                        <span>COMPUTER SCIENCE - INTERNATIONAL RELATIONS</span>
+                   </div>
+                   <div class="InfoText" style="height: 25%; margin-top: 35px">
+                        <span style="font-family: 'Scheherazade New', serif; font-size: 60px">
+                            An Enriching Experience at a Small Hometown College.
+                        </span> 
+                   </div>
+                   <div class="InfoText" style="height: 40%; margin-top: 35px; flex-direction: row; gap: 35px">
+                        <div class="DeepInfoText">
+                            <span> Nestled in my hometown of Williamsburg, Virginia, I am proud to call the College of William and Mary a part of my education and life. Alma mater of Thomas Jefferson and George Washington, W&M offered a top-notch education and a portal to the past.</span>
+                        </div>
+                        <div class="DeepInfoText">
+                            <span> I left William & Mary in 2022 to pursue a richer education in Computer Science and more opportunities at the University of Virginia. A bittersweet transfer.</span>
+                        </div>
+                    </div>
+                </div>
 
             </div>
-            <div class="ImageTextBlock" style="height: 720px;; width: 90vw; align-self: center">
+        </div>
 
+        <div class="BotNav">
+            <div class = "MenuWrapper">
+                <div class="MenuItem">INSTAGRAM</div>
+                <div class="MenuItem">LINKEDIN</div>
+                <div class="MenuItem">EMAIL</div>
             </div>
+        </div>
+
+        <div id = "bottomBlock" class="BottomBlock">
+
         </div>
 
         <img id="scrollArrow" class="ScrollArrow" src="DownArrow.png"/>
