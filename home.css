@@ -319,7 +319,6 @@ span::selection {
 }
 
 .DesignWindow {
-    border: 2px solid green;
     width: 78vw;
     height: 800px;
     position: absolute;
@@ -328,6 +327,7 @@ span::selection {
 }
 
 .DesignWindow > .DesignImage {
+    border-radius: 5px;
     height: 100%;
     width: 50%;
     display: grid;

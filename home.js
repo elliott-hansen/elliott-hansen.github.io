@@ -17,6 +17,15 @@ function reAlignPage() {
     console.log("page aligned")
 }
 
+var wheelDistance = function(evt) {
+    // wheelDelta indicates how
+    // Far the wheel is turned
+    var w = evt.wheelDelta;
+         
+    // Returning normalized value
+    return w / 120;
+}
+
 
 function isInViewport(element) {
     const rect = element.getBoundingClientRect();
@@ -29,11 +38,12 @@ function isInViewport(element) {
 }
 
 document.addEventListener('wheel', (event) => {
+    wd = -wheelDistance(event)
     if (amountScrolled <= 0 && amountScrolled > -185) {
-        if (amountScrolled - event.deltaY / 102 >= 1) {
+        if (amountScrolled - wd >= 0) {
             return;
         }
-        if (amountScrolled - event.deltaY / 102 === -185 ) {
+        if (amountScrolled - wd === -185 ) {
             return;
         }
         if(!firstScroll) {
@@ -42,7 +52,7 @@ document.addEventListener('wheel', (event) => {
             } , {easing: 'ease-out', duration: 400, fill: 'forwards'});
             firstScroll = true;
         }
-        amountScrolled -= (event.deltaY / 102) * 8;
+        amountScrolled -= wd * 8;
         console.log(amountScrolled);
         track.animate( { transform: 'translateY('+amountScrolled*0.5+'%)' }, {easing: 'ease-in-out',duration: 500, fill: 'forwards'} );
 
@@ -50,7 +60,8 @@ document.addEventListener('wheel', (event) => {
             img.animate({ transform: 'translateY('+(-amountScrolled)+'%)' }, {easing: 'ease-in-out',duration: 500, fill: 'forwards'});
             // img.animate({ objectPosition: 'center '+(-amountScrolled)/3+"%"}, {easing: 'ease-in-out',duration: 800, fill: 'forwards'});
             if(amountScrolled > -105) {
-                designImage.animate({ transform: 'translateY('+(-amountScrolled-104)+'%)' }, {easing: 'ease-in-out',duration: 500, fill: 'forwards'});
+                designImage.animate({ opacity: -amountScrolled+'%'}, {easing: 'ease-in-out',duration: 1600, fill: 'forwards'});
+                designImage.animate({ transform: 'translateY('+(-amountScrolled-104)+'%)'}, {easing: 'ease-in-out',duration: 500, fill: 'forwards'});
             }
         }
 
