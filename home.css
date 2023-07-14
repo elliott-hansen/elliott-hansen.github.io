@@ -6,6 +6,11 @@ body {
     overflow: hidden;
 }
 
+span::selection {
+    background-color: #9cada0;
+    color: #e4dfdf;
+}
+
 .MainBlock {
     display: grid;
     height: 100vh;
@@ -36,7 +41,7 @@ body {
     z-index: 1;
     margin-top: 55px;
     width: 100%;
-    height: 400vh;
+    height: 500vh;
     /* transition: 0.8s ease-in-out; */
     display: flex;
     flex-direction: column;
@@ -48,11 +53,10 @@ body {
     width: 100%;
     height: 20%;
     border-bottom: 2px solid  #d8d2d2 ;
-    /* border: 2px solid green; */
 }
 
 .BodyTrack > .BigImage {
-    margin-top: 124vh;
+    margin-top: 129.6vh;
     position: absolute !important;
     display: flex;
     flex-grow: 1;
@@ -68,9 +72,6 @@ body {
     object-fit: cover !important;
     object-position: center 0%;
 }
-
-
-
 .BigImage > .StaticImage {
     z-index: 4 !important;
     align-self: center !important;
@@ -84,8 +85,8 @@ body {
 
 .ImageTextBlock > .TextBlock {
     position: static;
-    height: 100%;
-    width: 30%;
+    height: 90%;
+    width: 25%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -112,7 +113,6 @@ body {
 }
 
 .InfoText > span {
-    user-select: none;
     font-family: 'Oswald', sans-serif;
     font-weight: 200;
     font-size: 15px;
@@ -122,11 +122,10 @@ body {
 
 .DeepInfoText {
     height: 100%;
-    width: 30%;
+    width: 40%;
 }
 
 .DeepInfoText > span {
-    user-select: none;
     font-size: 16px;
     font-family: 'Tajawal', sans-serif;
 }
@@ -243,11 +242,12 @@ body {
 }
 
 .BotNav > .MenuWrapper {
+    gap: 8px;
     margin-left: auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     height: 100%;
     width: auto;
     opacity: 0%;
@@ -261,17 +261,32 @@ body {
 
 .MenuWrapper > .MenuItem {
     user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: left;
     font-family: 'Oswald', sans-serif;
     font-weight: 200;
     font-size: 13px;
     width: auto;
-    height: 100%;
+    height: auto;
     transition: 0.2s;
 }
 
+.MenuItem > a {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    z-index: 3;
+}
+
 .MenuItem:hover {
-    margin-right: 12%;
+    margin-bottom: 12%;
+}
+
+.MenuItem > img {
+    width: 25px;
+    filter: brightness(20%);
 }
 
 .NameBlock > span {
@@ -284,7 +299,7 @@ body {
 }
 
 .BottomBlock {
-    z-index: 6;
+    z-index: 1;
     width: 100vw;
     height: 125px;
     background-color: #d8d2d2;
@@ -301,4 +316,22 @@ body {
 #fadeText {
     opacity: 0%;
     transition: 0.2s;
+}
+
+.DesignWindow {
+    border: 2px solid green;
+    width: 78vw;
+    height: 800px;
+    position: absolute;
+    margin-top: 265vh;
+    left: 11vw;
+}
+
+.DesignWindow > .DesignImage {
+    height: 100%;
+    width: 50%;
+    display: grid;
+    justify-content: center;
+    object-fit: cover !important;
+    object-position: center 0%;
 }
