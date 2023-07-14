@@ -1,6 +1,6 @@
 body {
     margin: 0%;
-    height: 100vh;
+    scale: 100vw;
     display: grid;
     background-color: #e4dfdf;
     overflow: hidden;
@@ -11,7 +11,51 @@ span::selection {
     color: #e4dfdf;
 }
 
+.LoadFadeIn {
+    background-color: #d8d2d2;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 99;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: loadfadein 0.8s 0.3s normal forwards;
+}
+
+@keyframes loadfadein {
+    from {opacity: 100%;}
+    to {opacity: 0%;}
+}
+
+.SorryPage {
+    display: none;
+    background-color: #d13939;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: 50;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.SorryPage > span {
+    text-align: center;
+    width: 80vw;
+    user-select: none;
+    font-size: 7vh;
+    font-family: 'Scheherazade New', serif;
+    font-weight: 500;
+    line-height: 100%;
+    color: #e4dfdf;
+}
+
 .MainBlock {
+    z-index: 0;
     display: grid;
     height: 100vh;
     width: 100vw;
@@ -38,7 +82,7 @@ span::selection {
     to {opacity: 100%;}
 }
 .MainBlock > .BodyTrack {
-    z-index: 1;
+    z-index: 0;
     margin-top: 55px;
     width: 100%;
     height: 500vh;
@@ -73,7 +117,7 @@ span::selection {
     object-position: center 0%;
 }
 .BigImage > .StaticImage {
-    z-index: 4 !important;
+    z-index: 2 !important;
     align-self: center !important;
     width: 100vw !important;
     height: 100vh;
@@ -182,7 +226,7 @@ span::selection {
 }
 
 .TopNav {
-    width: 90vw;
+    width: 95vw;
     height: 55px;
     display: flex;
     justify-self: center;
@@ -192,7 +236,7 @@ span::selection {
 }
 
 .BotNav {
-    width: 90vw;
+    width: 95vw;
     height: 55px;
     display: flex;
     justify-self: center;
@@ -320,10 +364,32 @@ span::selection {
 
 .DesignWindow {
     width: 78vw;
-    height: 800px;
+    height: 85vh;
     position: absolute;
-    margin-top: 265vh;
+    margin-top: 260vh;
     left: 11vw;
+    /* border: 2px solid green; */
+    display: flex;
+    flex-direction: row;
+    gap: 55px
+}
+
+.DesignTextWindow {
+    width: 50%;
+    height: 100%;
+    /* border: 2px solid yellow; */
+}
+
+.DesignTextWindow > .DesignTextBlock {
+    width: 100%;
+    height: auto;
+    /* border: 2px solid red; */
+}
+
+.DesignTextBlock > span {
+    font-family: 'Scheherazade New', serif;
+    font-size: 75px;
+    line-height: 80px
 }
 
 .DesignWindow > .DesignImage {
@@ -334,4 +400,49 @@ span::selection {
     justify-content: center;
     object-fit: cover !important;
     object-position: center 0%;
+}
+
+.BottomScrollBar {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 2px solid #d8d2d2;
+    height: 700px;
+    width: 200vw;
+    margin-top: 535vh;
+    transform: translateX(100%);
+    gap: 5%;
+}
+
+.BottomScrollBar > .ScrollBlock {
+    height: 70%;
+    width: 15%;
+    background-color: #d8d2d2;
+}
+
+.ContactButton {
+    width: 155px;
+    height: 60px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: #d8d2d2;
+    transition: 0.3s;
+    border-radius: 3.5%;
+}
+
+.ContactButton:hover {
+    background-color: #9cada0;
+}
+
+.ContactButton:active {
+    transition: 0.1s;
+    background-color: #397048;
+}
+
+.ContactButton > a {
+    position: absolute;
+    width: inherit;
+    height: inherit;
 }

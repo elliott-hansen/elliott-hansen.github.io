@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"/>
     <title>Elliott Hansen</title>
 
     <style>
@@ -10,9 +10,13 @@
     </style> 
 
     <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="queries.css">
 </head>
 <body onload = "reAlignPage()">
-
+    <div id = "loadFadeIn" class="LoadFadeIn"></div>
+    <div class="SorryPage">
+        <span> Sorry. <br> This page is not yet optimized for a screen of this size.</span>
+    </div>
     <div class="MainBlock" style="left: 0%">
         <!-- Top Nav -->
         <div class="TopNav"> 
@@ -31,30 +35,47 @@
 
         <div id = "scrollTrack" class="BodyTrack">
             <div class="ImageTextBlock" style="border: none">
-                <img class="Image" style="height: 100%; opacity: 15%; filter: blur(3px)" src="Capital_Sketch.png"/>
+                <img class="Image" style="z-index: 3; height: 100%; opacity: 15%; filter: blur(3px)" src="Capital_Sketch.png"/>
                 <div class="TextBlock">
                     <span> Hey, I'm</span>
                     <span> Elliott<span style="color: #397048">.</span> </span>
                 </div>
             </div>
             <div id = "bigImage" class="BigImage">
-                <img class="StaticImage" src="uva2.png">
+                <img class="StaticImage" src="uva2background.jpg">
             </div>
 
             <div class="DesignWindow">
-                <img id="designImage" class="DesignImage" src="lady.jpg" style="height: 100%; transform: translateY(-104%);"/>
+                <img id="designImage" class="DesignImage" src="me.JPG" style="height: 100%; transform: translateY(-104%);"/>
+                <div id="designText" class="DesignTextWindow">
+                    <div class="DesignTextBlock">
+                        <span>
+                            I Design and Engineer Things.
+                        </span>
+                    </div>
+                    <div class="DesignTextBlock" style="display: flex; align-items: center; justify-content: center;">
+                        <div id="contactButton" class="ContactButton">
+                            <span style="user-select: none;"> Contact Me </span>
+                            <a href="javascript:delay('contact.html')"></a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- PROF. EXPERIENCE -->
-            <div class="ImageTextBlock" style= "gap: 125px; height: 620px; margin-top: 280vh; width: 78vw; align-self: center">
+            <div class="ImageTextBlock" style= "gap: 125px; height: 620px; margin-top: 260vh; width: 78vw; align-self: center">
                 <div class = "InfoBlock">
                     <div class="InfoText" style="height: 35px">
                         <span>PROFESSIONAL EXPERIENCE</span>
                     </div>
-                    <div class="InfoText" style="height: 55%; margin-top: 35px">
+                    <div class="InfoText" style="height: 55%; margin-top: 5px">
                         <span style="font-family: 'Scheherazade New', serif; font-size: 60px;">
-                            Full-Time Student and Freelance Web Developer
+                            Freelance Web Developer
                         </span> 
+                    </div>
+                    <div class="ResumeDownload">
+                        <span style="user-select: none;">RESUME</span>
+                        <a href="Resume - Elliott Hansen.pdf" target="_blank"></a>
                     </div>
                     <div class="InfoText" style="height: 35px; margin-top: auto;">
                         <span style="font-size: 10px;">2020 - PRESENT</span> 
@@ -66,22 +87,16 @@
                     </div>
                     <div class="InfoText" style="height: 25%; margin-top: 15px">
                         <span style="font-family: 'Scheherazade New', serif; font-size: 60px">
-                            TITLE INFO
+                            Amatuer Designer, Fast Learner.
                         </span> 
-                        <div class="ResumeDownload">
-                            RESUME
-                            <a href="Resume - Elliott Hansen.pdf" target="_blank"></a>
-                        </div>
+                        
                     </div>
                     <div class="InfoText" style="height: 40%; margin-top: 15px; flex-direction: row; gap: 35px">
                         <div class="DeepInfoText">
-                            <span> After transferring from the College of William & Mary in 2022. I began the rest of my time in University at the prestigious University of Virginia in Charlottesville, Virginia. A place that seemingly can't get enough of their founder and the third president of the United States, Thomas Jefferson.</span>
+                            <span> During my third year at the University of Virginia, I began exploring the side of programming involving web design and app development and found joy in designing and building websites. Learning CSS, HTML, JavaScript in the course of a few weeks and gaining a ton of experience through personal projects </span>
                         </div>
                         <div class="DeepInfoText">
-                            <span> Studying Computer Science here is an incredible experience and privelage and has lead me down a path towards a career in Software Engieering and Full-Stack Development. Go Hoos!</span>
-                        </div>
-                        <div class="DeepInfoText" style="display: flex; justify-content: center;">
-                            
+                            <span> I am planning on exploring web development much more in my fourth year of college, hoping to do this professionally after having a more formal education in full-stack and backend development.</span>
                         </div>
                     </div>
                 </div>
@@ -161,6 +176,10 @@
                 </div>
 
             </div>
+
+            <div id = "bottomScrollBar" class="BottomScrollBar">
+                <span style="font-size: 130px"> COMING SOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOON </span>
+            </div>
         </div>
 
         <div class="BotNav">
@@ -181,7 +200,6 @@
         </div>
 
         <div id = "bottomBlock" class="BottomBlock">
-
         </div>
 
         <img id="scrollArrow" class="ScrollArrow" src="DownArrow.png"/>
