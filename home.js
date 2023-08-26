@@ -56,7 +56,6 @@ document.addEventListener('wheel', (event) => {
     }if (amountScrolled < -179) {
         amountScrolled = -178;
         track.animate( { transform: 'translateY(-178%)' }, {easing: 'ease-in-out',duration: 500, fill: 'forwards'} );
-        console.log('fixed');
         return;
     }
     if (amountScrolled <= 0 && amountScrolled > -179) {
@@ -108,12 +107,10 @@ document.addEventListener('wheel', (event) => {
             bottomBlock.animate( {transform: 'translateY(0%)'}, {easing: 'ease-out', duration: 500, fill: 'forwards'});
             socialLink1.animate( {filter: 'brightness(100%)'}, {easing: 'ease-out', duration: 500, fill: 'forwards'});
             bottomBlockVisible = true;
-            console.log('visible');
         }
         else if (bottomBlockVisible === true && amountScrolled > -178){
             bottomBlock.animate( {transform: 'translateY(100%)'}, {easing: 'ease-out', duration: 500, fill: 'forwards'});
             bottomBlockVisible = false;
         }
-        console.log(amountScrolled);
 });
 
