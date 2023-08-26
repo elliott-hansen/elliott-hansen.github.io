@@ -335,7 +335,7 @@ span::selection {
 
 .NameBlock > span {
     user-select: none;
-    text-align: center;
+    text-align: left;
     white-space: nowrap;
     overflow: hidden;
     width: 0%;
@@ -353,8 +353,8 @@ span::selection {
 }
 
 @keyframes typewriter {
-    from {width: 0}
-    to {width: 100%}
+    0% {width: 0}
+    100% {width: 110%}
 }
 
 #fadeText {
