@@ -71,9 +71,9 @@ document.addEventListener('wheel', (event) => {
             for (const img of track.getElementsByClassName("Image")) {
                 img.animate({ transform: 'translateY('+(-amountScrolled)+'%)' }, {easing: 'ease-in-out',duration: 500, fill: 'forwards'});
                 // img.animate({ objectPosition: 'center '+(-amountScrolled)/3+"%"}, {easing: 'ease-in-out',duration: 800, fill: 'forwards'});
-                if(amountScrolled > -105) {
-                    designImage.animate({ opacity: -amountScrolled+'%'}, {easing: 'ease-in-out',duration: 1600, fill: 'forwards'});
-                    designImage.animate({ transform: 'translateY('+(-amountScrolled-104)+'%)'}, {easing: 'ease-in-out',duration: 900, fill: 'forwards'});
+                if(amountScrolled > -85) {
+                    designImage.animate({ opacity: -amountScrolled*1.15+'%'}, {easing: 'ease-in-out',duration: 1600, fill: 'forwards'});
+                    designImage.animate({ transform: 'translateY('+(-amountScrolled-85)+'%)'}, {easing: 'ease-in-out',duration: 900, fill: 'forwards'});
                 }
             }
     
