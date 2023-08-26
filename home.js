@@ -16,11 +16,11 @@ let firstScroll = false;
 let bottomBlockVisible = false;
 let sideScroll = 100;
 
-function reAlignPage() {
-    console.log("aligning page")
-    track.finish();
-    console.log("page aligned")
-}
+// function reAlignPage() {
+//     console.log("aligning page")
+//     track.finish();
+//     console.log("page aligned")
+// }
 
 var wheelDistance = function(evt) {
     // wheelDelta indicates how
@@ -49,6 +49,9 @@ function isInViewport(element) {
 
 document.addEventListener('wheel', (event) => {
     wd = -wheelDistance(event)
+    if (amountScrolled > 0) {
+        amountScrolled = 0
+    }
     if (amountScrolled <= 0 && amountScrolled > -224) {
         if (amountScrolled - wd >= 0) {
             return;
