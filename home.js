@@ -28,7 +28,7 @@ var wheelDistance = function(evt) {
     var w = evt.wheelDelta;
          
     // Returning normalized value
-    return w / 120;
+    return (w / 120);
 }
 
 function delay (URL) {
@@ -50,13 +50,20 @@ function isInViewport(element) {
 document.addEventListener('wheel', (event) => {
     wd = -wheelDistance(event)
     if (amountScrolled > 0) {
-        amountScrolled = 0
+        amountScrolled = 0;
+        track.animate( { transform: 'translateY(0%)' }, {easing: 'ease-in-out',duration: 500, fill: 'forwards'} );
+        return;
+    }if (amountScrolled < -179) {
+        amountScrolled = -178;
+        track.animate( { transform: 'translateY(-178%)' }, {easing: 'ease-in-out',duration: 500, fill: 'forwards'} );
+        console.log('fixed');
+        return;
     }
-    if (amountScrolled <= 0 && amountScrolled > -224) {
+    if (amountScrolled <= 0 && amountScrolled > -179) {
         if (amountScrolled - wd >= 0) {
             return;
         }
-        if (amountScrolled - wd > -224 ) {
+        if (amountScrolled - wd > -178 ) {
             amountScrolled -= wd * 8;
             if(!firstScroll) {
                 scrollArrow.animate( {
@@ -84,25 +91,26 @@ document.addEventListener('wheel', (event) => {
 
     
         }
-        else if (amountScrolled <= -224 && amountScrolled >= -304) {
-            if (amountScrolled - wd * 8 < -304) {
+        else if (amountScrolled <= -178 && amountScrolled > -182) {
+            if (amountScrolled - wd * 8 <= -183) {
                 return
             }
             amountScrolled -= wd * 8;
-            sideScroll -= wd * 20;
-            if (sideScroll > 100) {
-                sideScroll = 100;
-            }
-            console.log("sidescroll:", sideScroll);
-            bottomScrollBar.animate( { transform: 'translateX('+sideScroll+'%)' }, {easing: 'ease-in-out',duration: 1000, fill: 'forwards'} );
+            // sideScroll -= wd * 20;
+            // if (sideScroll > 100) {
+            //     sideScroll = 100;
+            // }
+            // console.log("sidescroll:", sideScroll);
+            // bottomScrollBar.animate( { transform: 'translateX('+sideScroll+'%)' }, {easing: 'ease-in-out',duration: 1000, fill: 'forwards'} );
         }
 
-        if (amountScrolled === -224 && bottomBlockVisible === false) {
+        if (amountScrolled <= -178 && bottomBlockVisible === false) {
             bottomBlock.animate( {transform: 'translateY(0%)'}, {easing: 'ease-out', duration: 500, fill: 'forwards'});
             socialLink1.animate( {filter: 'brightness(100%)'}, {easing: 'ease-out', duration: 500, fill: 'forwards'});
             bottomBlockVisible = true;
+            console.log('visible');
         }
-        else if (bottomBlockVisible === true && amountScrolled > -224){
+        else if (bottomBlockVisible === true && amountScrolled > -178){
             bottomBlock.animate( {transform: 'translateY(100%)'}, {easing: 'ease-out', duration: 500, fill: 'forwards'});
             bottomBlockVisible = false;
         }
