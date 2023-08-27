@@ -7,4 +7,18 @@
     font-size: 135px;
     white-space: nowrap;
     overflow: hidden;
+    height: 230px;
+    display: flex;
+}
+
+.EmailBlock {
+    margin-top: 25px; 
+    background-color: #d8d2d2; 
+    height: 70px; 
+    display: flex; 
+    justify-content: center;
+    color: #397048;
+    font-family: 'Oswald', sans-serif;
+    align-items: center;
+    font-size: 35px;
 }
