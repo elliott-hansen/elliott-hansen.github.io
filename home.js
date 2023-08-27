@@ -9,7 +9,8 @@ const socialLink3 = document.getElementById("social3");
 const designImage = document.getElementById("designImage");
 const designText = document.getElementById("designText");
 const bottomScrollBar = document.getElementById("bottomScrollBar");
-const loadFadeIn = document.getElementById("loadFadeIn")
+const loadFadeIn = document.getElementById("loadFadeIn");
+var flavorText = document.getElementsByClassName("flavorText");
 
 let amountScrolled = 0;
 let firstScroll = false;
@@ -75,11 +76,21 @@ document.addEventListener('wheel', (event) => {
             }
     
             for (const img of track.getElementsByClassName("Image")) {
-                img.animate({ transform: 'translateY('+(-amountScrolled)+'%)' }, {easing: 'ease-in-out',duration: 500, fill: 'forwards'});
+                img.animate({ transform: 'translateY('+(-amountScrolled)*0.55+'%)' }, {easing: 'ease-in-out',duration: 500, fill: 'forwards'});
                 // img.animate({ objectPosition: 'center '+(-amountScrolled)/3+"%"}, {easing: 'ease-in-out',duration: 800, fill: 'forwards'});
                 if(amountScrolled > -85) {
                     designImage.animate({ opacity: -amountScrolled*1.15+'%'}, {easing: 'ease-in-out',duration: 1600, fill: 'forwards'});
                     designImage.animate({ transform: 'translateY('+(-amountScrolled-85)+'%)'}, {easing: 'ease-in-out',duration: 900, fill: 'forwards'});
+                }
+                if(amountScrolled < -85) {
+                    for(var i = 0; i < flavorText.length; i++) {
+                        flavorText[i].animate({ color: '#397048'}, {easing: 'ease-in-out',duration: 1200, fill: 'forwards'});
+                    }
+                }
+                else {
+                    for(var i = 0; i < flavorText.length; i++) {
+                        flavorText[i].animate({ color: 'black'}, {easing: 'ease-in-out',duration: 1200, fill: 'forwards'});
+                    }
                 }
             }
     

@@ -109,7 +109,8 @@ span::selection {
 }
 
 .ImageTextBlock > .Image {
-    height: 620px;
+    height: 650px;
+    scale: 150%;
     width: 50%;
     display: grid;
     justify-content: center;
@@ -227,7 +228,7 @@ span::selection {
 }
 
 .TopNav {
-    width: 95vw;
+    width: 96.5vw;
     height: 35px;
     display: flex;
     justify-self: center;
@@ -365,7 +366,7 @@ span::selection {
 
 .DesignWindow {
     width: 78vw;
-    height: 680px;
+    height: 550px;
     position: absolute;
     margin-top: 1700px;
     left: 11vw;
@@ -395,7 +396,6 @@ span::selection {
 
 .DesignWindow > .DesignImage {
     border-radius: 5px;
-    height: 100%;
     width: 50%;
     display: grid;
     justify-content: center;
