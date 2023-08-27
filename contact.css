@@ -1,0 +1,10 @@
+.LetsTalk {
+    user-select: none;
+    position: static;
+    font-family: 'Scheherazade New', serif;
+    font-weight: 600;
+    color: rgb(32, 32, 32);
+    font-size: 135px;
+    white-space: nowrap;
+    overflow: hidden;
+}
