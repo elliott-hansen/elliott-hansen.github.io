@@ -85,7 +85,7 @@ span::selection {
     z-index: 0;
     margin-top: 35px;
     width: 100%;
-    height: 4000px;
+    height: 4500px;
     /* transition: 0.8s ease-in-out; */
     display: flex;
     flex-direction: column;
@@ -446,4 +446,89 @@ span::selection {
     position: absolute;
     width: inherit;
     height: inherit;
+}
+
+.ProjectBlockTitle {
+    display: flex;
+    height: 30px;
+    position:relative;
+    opacity: 0%;
+    transition: 0.4s;
+    user-select: none;
+    margin-bottom: 15px;
+}
+
+.ProjectBlockTitle > span {
+    color: rgb(32, 32, 32);
+    font-family: 'Oswald', sans-serif;
+}
+
+.ProjectBlockFlavor {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    height: 300px;
+    width: 0px;
+    top: 2700px;
+    transition: 0.4s;
+}
+
+.ProjectBlockFlavor > span { 
+    user-select: none;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    opacity: 0%;
+    transition: 0.4s;
+    color: rgb(32, 32, 32);
+    font-family: 'Oswald', sans-serif;
+}
+
+.ProjectBlock {
+    height: 200px;
+    width: 85px;
+    background-color: #d8d2d2;
+    border-radius: 5px;
+    transition: 0.4s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.ProjectBlock:hover {
+    background-color: #dfd8d8;
+    height: 280px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 500px;
+}
+
+.ProjectBlock:hover > .ProjectBlockFlavor {
+    width: 500px;
+}
+
+.ProjectBlock:hover > .ProjectBlockFlavor > span {
+    opacity: 100%;
+}
+
+.ProjectBlock:hover > .ProjectBlockFlavor > .ProjectBlockTitle {
+    opacity: 100%;
+}
+
+/* .ProjectBlock:hover > .ProjectBlockTitle {
+    opacity: 100%;
+} */
+
+.ProjectBlock:hover > .ProjectImage {
+    filter: grayscale(0%) brightness(100%);
+}
+
+.ProjectBlock > .ProjectImage {
+    transition: 0.5s;
+    filter: grayscale(100%) brightness(80%);
+    width: 100%;
+    height: 280px;
+    display: grid;
+    object-fit: cover !important;
+    object-position: center;
 }

@@ -22,3 +22,8 @@
     align-items: center;
     font-size: 35px;
 }
+
+.EmailBlock::selection {
+    background-color: #9cada0;
+    color: #e4dfdf;
+}

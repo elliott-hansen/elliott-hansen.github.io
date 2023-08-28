@@ -78,11 +78,11 @@ document.addEventListener('wheel', (event) => {
             for (const img of track.getElementsByClassName("Image")) {
                 img.animate({ transform: 'translateY('+(-amountScrolled)*0.2+'%)' }, {easing: 'ease-in-out',duration: 500, fill: 'forwards'});
                 // img.animate({ objectPosition: 'center '+(-amountScrolled)/3+"%"}, {easing: 'ease-in-out',duration: 800, fill: 'forwards'});
-                if(amountScrolled > -85) {
-                    designImage.animate({ opacity: -amountScrolled*1.15+'%'}, {easing: 'ease-in-out',duration: 1600, fill: 'forwards'});
-                    designImage.animate({ transform: 'translateY('+(-amountScrolled-85)+'%)'}, {easing: 'ease-in-out',duration: 900, fill: 'forwards'});
+                if(amountScrolled > -75) {
+                    designImage.animate({ opacity: -amountScrolled*1.35+'%'}, {easing: 'ease-in-out',duration: 1600, fill: 'forwards'});
+                    designImage.animate({ transform: 'translateY('+(-amountScrolled-75)+'%)'}, {easing: 'ease-in-out',duration: 900, fill: 'forwards'});
                 }
-                if(amountScrolled < -85) {
+                if(amountScrolled < -70) {
                     for(var i = 0; i < flavorText.length; i++) {
                         flavorText[i].animate({ color: '#397048'}, {easing: 'ease-in-out',duration: 1200, fill: 'forwards'});
                     }
