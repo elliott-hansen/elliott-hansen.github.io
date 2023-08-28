@@ -456,11 +456,15 @@ span::selection {
     transition: 0.4s;
     user-select: none;
     margin-bottom: 15px;
+    user-select: none;
+
 }
 
 .ProjectBlockTitle > span {
     color: rgb(32, 32, 32);
     font-family: 'Oswald', sans-serif;
+    user-select: none;
+
 }
 
 .ProjectBlockFlavor {
@@ -471,6 +475,7 @@ span::selection {
     width: 0px;
     top: 2700px;
     transition: 0.4s;
+    user-select: none;
 }
 
 .ProjectBlockFlavor > span { 
@@ -505,14 +510,19 @@ span::selection {
 
 .ProjectBlock:hover > .ProjectBlockFlavor {
     width: 500px;
+    user-select: all;
+
 }
 
 .ProjectBlock:hover > .ProjectBlockFlavor > span {
     opacity: 100%;
+    user-select: all;
+
 }
 
 .ProjectBlock:hover > .ProjectBlockFlavor > .ProjectBlockTitle {
     opacity: 100%;
+    user-select: all;
 }
 
 /* .ProjectBlock:hover > .ProjectBlockTitle {
