@@ -1,321 +1,42 @@
 <!DOCTYPE html>
-<html lang="en" style="">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"/>
-    <title>Elliott Hansen</title>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet/less" type="text/css" href="main.less" />
+        <link rel="stylesheet/less" type="text/css" href="queries.less" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/less" ></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Agbalumo&family=Anton&family=Bebas+Neue&family=Fira+Code&family=Fjalla+One&family=Lobster+Two:ital,wght@0,700;1,700&family=PT+Serif&family=Philosopher&family=Scheherazade+New:wght@400;500;600;700&family=Tsukimi+Rounded:wght@300;400&family=Vollkorn&display=swap');
+        </style>
+        <title> Elliott Hansen </title>
+    </head>
+        <body>
+            
+            <div id="ScrollTrack" class="scroll-track">
+                <nav>
+                    <h1>Elliott</h1>
+                </nav>
+                <div id="g1" delay='875'class="grid-box scrollable" style="grid-row: 1/6; grid-column: 1/4"></div>
+                <div id="g2" delay='865' class="grid-box scrollable" style="grid-row: 1/3; grid-column: 4/10"></div>
+                <div id="g3" delay='815' class="grid-box scrollable" style="grid-row: 1/3; grid-column: 10/12"></div>
+                <div id="g4" delay='900' class="grid-box scrollable" style="grid-row: 3/6; grid-column: 4/12"></div>
+                
+                <a id="g5" href="https://github.com/elliott-hansen" delay='925' class="grid-box scrollable social" style="grid-row: 8/10; grid-column: 8/10">
+                    <img src="./github.png">
+                </a>
+                <a id="g6" href="https://www.linkedin.com/in/elliott-n-hansen/" delay='900' class="grid-box scrollable social" style="grid-row: 6/8; grid-column: 8/10">
+                    <img src="./linkedin.webp">
+                </a>
+                
+                <div id="g7" delay='915' class="grid-box scrollable" style="grid-row: 6/8; grid-column: 3/8"></div>
 
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Asar&family=Cormorant+Unicase:wght@500;600&family=Kaisei+HarunoUmi:wght@700&family=Oswald:wght@400;600;700&family=PT+Sans&family=Scheherazade+New:wght@500;600&family=Tajawal&family=Varela+Round&family=Yuji+Syuku&display=swap');
-    </style> 
-
-    <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="queries.css">
-</head>
-<body>
-    <div id = "loadFadeIn" class="LoadFadeIn"></div>
-    <div class="SorryPage">
-        <span> Sorry. <br> This page is not yet optimized for a screen of this size yet.</span>
-    </div>
-    <div class="MainBlock" style="left: 0%">
-        <!-- Top Nav -->
-        <div class="TopNav"> 
-            <div class="NameBlock">
-                <span>ELLIOTT HANSEN</span>
+                <div id="g8" delay='895' class="grid-box scrollable" style="grid-row: 6/8; grid-column: 1/3"></div>
+                <div id="g9" delay='955' class="grid-box scrollable" style="grid-row: 8/11; grid-column: 1/8"></div>
+                <div id="g10" delay='930' class="grid-box scrollable" style="grid-row: 6/11; grid-column: 10/12"></div>
             </div>
-            <!-- <div class="LangSelector" style="margin-left: auto">
-                EN.
-                <a href="index.html"></a>
-                </div>
-            <div class="LangSelector" style="color: #cfc7c7 ">
-                <a href="index-de.html"></a>
-                DE.
-            </div> -->
-        </div>
-
-        <div id = "scrollTrack" class="BodyTrack">
-            <div class="ImageTextBlock" style="border: none;">
-                <img class="Image" style="z-index: 3; height: auto; opacity: 15%; filter: blur(3px); overflow: visible;" src="compass.png"/>
-                <div class="TextBlock">
-                    <span> Hey, I'm</span>
-                    <span> Elliott<span style="color: #397048">.</span> </span>
-                </div>
-            </div>
-            <div id = "bigImage" class="BigImage">
-                <img class="StaticImage" src="uva2background.jpg">
-            </div>
-
-            <div class="DesignWindow">
-                <img id="designImage" class="DesignImage" src="me.JPG" style="height: 580px; transform: translateY(-104%);"/>
-                <div id="designText" class="DesignTextWindow">
-                    <div class="DesignTextBlock">
-                        <span>
-                            I Design and Engineer Things.
-                        </span>
-                    </div>
-                    <div class="DesignTextBlock" style="margin-top: 25px; height: 300px;">
-                        <span style="font-size: 18px; line-height: 25px;">
-                            I'm an up and coming graduate with expertise in the fields of Software Engineering and Full Stack Development, I dabble in UI/UX design too.
-                             <br><br> I've created apps and worked on projects with industry-standard programming languages like <span class="flavorText">Python</span>, <span class="flavorText">Java</span>, and <span class="flavorText">PHP</span>. I've also worked with frameworks like Angular and Django. If you're a campus recruiter looking to get in touch, I invite you to reach out.
-                             <br><br> Outside of development and school, I enjoy exploring foreign cultures, going to national parks, and getting out on the water.
-                        </span>
-                    </div>
-                    <div class="DesignTextBlock" style="display: flex; align-items: center; margin-top: 30px;">
-                        <div id="contactButton" class="ContactButton">
-                            <span style="user-select: none;"> Contact Me </span>
-                            <a href="javascript:delay('contact.html')"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="ImageTextBlock" style="align-self: center; height: 300px; margin-top: 1700px; display: flex; align-items: center; border: none;">
-                <div style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; gap: 2%;">
-                    <div id="p1" class="ProjectBlock">
-                        <img class="ProjectImage" src="p1_v4.png">
-                        <div class="ProjectBlockFlavor">
-                            <div class="ProjectBlockTitle">
-                                <span>PERSONAL WEBSITE</span>
-                                <span style="margin-left: auto; opacity: 50%; font-size: 12px;"> 2023 </span>
-                            </div>
-                            <span>
-                                This is my personal website (the one you are currently visiting). <br>
-                                This website serves as a portfolio and social hub for myself. <br>
-                                It also showcases what I can do with CSS and HTML.
-                            </span>
-                        </div>
-                    </div>
-
-                    <div id="p2" class="ProjectBlock">
-                        <img class="ProjectImage" src="p2.png">
-                        <div class="ProjectBlockFlavor">
-                            <div class="ProjectBlockTitle">
-                                <span>MODEL FOR COURSE REGISTRATION AND REVIEW</span>
-                                <span style="margin-left: auto; opacity: 50%; font-size: 12px;"> 2023 </span>
-                            </div>
-                            <span>
-                                A future project is going here. <br>
-                                Oh how exciting! <br>
-                            </span>
-                        </div>
-                    </div>
-
-                    <div id="p3" class="ProjectBlock">
-                        
-                        <div class="ProjectBlockFlavor">
-                            <div class="ProjectBlockTitle">
-                                <span>PROJECT THREE</span>
-                                <span style="margin-left: auto; opacity: 50%; font-size: 12px;"> DATE </span>
-                            </div>
-                            <span>
-                                A future project is going here. <br>
-                                Oh how exciting!
-                            </span>
-                        </div>
-                    </div>
-
-                    <div id="p4" class="ProjectBlock">
-                        
-                        <div class="ProjectBlockFlavor">
-                            <div class="ProjectBlockTitle">
-                                <span>PROJECT FOUR</span>
-                                <span style="margin-left: auto; opacity: 50%; font-size: 12px;"> DATE </span>
-                            </div>
-                            <span>
-                                A future project is going here. <br>
-                                Oh how exciting!
-                            </span>
-                        </div>
-                    </div>
-
-                    <div id="p5" class="ProjectBlock">
-                        
-                        <div class="ProjectBlockFlavor">
-                            <div class="ProjectBlockTitle">
-                                <span>PROJECT FIVE</span>
-                                <span style="margin-left: auto; opacity: 50%; font-size: 12px;"> DATE </span>
-                            </div>
-                            <span>
-                                A future project is going here. <br>
-                                Oh how exciting!
-                            </span>
-                        </div>
-                    </div>
-
-                    <div id="p6" class="ProjectBlock">
-                        
-                        <div class="ProjectBlockFlavor">
-                            <div class="ProjectBlockTitle">
-                                <span>PROJECT SIX</span>
-                                <span style="margin-left: auto; opacity: 50%; font-size: 12px;"> DATE </span>
-                            </div>
-                            <span>
-                                A future project is going here. <br>
-                                Oh how exciting!
-                            </span>
-                        </div>
-                    </div>
-
-                    <div id="p7" class="ProjectBlock">
-                        
-                        <div class="ProjectBlockFlavor">
-                            <div class="ProjectBlockTitle">
-                                <span>PROJECT SEVEN</span>
-                                <span style="margin-left: auto; opacity: 50%; font-size: 12px;"> DATE </span>
-                            </div>
-                            <span>
-                                A future project is going here. <br>
-                                Oh how exciting!
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- PROF. EXPERIENCE -->
-            <div id="topOfExperience" class="ImageTextBlock" style= "border-top: 2px solid  #d8d2d2; gap: 125px; height: 480px; margin-top: 350px; width: 78vw; align-self: center">
-                <div class = "InfoBlock">
-                    <div class="InfoText" style="height: 35px">
-                        <span>PROFESSIONAL EXPERIENCE</span>
-                    </div>
-                    <div class="InfoText" style="height: auto; margin-top: 35px">
-                        <span style="font-family: 'Scheherazade New', serif; font-size: clamp(2vh, 60px, 15vh);">
-                            Freelance Web Developer
-                        </span> 
-                    </div>
-                    <div class="ResumeDownload">
-                        <span style="user-select: none;">RESUME</span>
-                        <a href="Resume - Elliott Hansen.pdf" target="_blank"></a>
-                    </div>
-                    <div class="InfoText" style="height: 35px; margin-top: auto;">
-                        <span style="font-size: 10px;">2020 - PRESENT</span> 
-                    </div>
-                </div>
-                <div class = "InfoBlock" style=" width: 100%; ">
-                    <div class="InfoText" style="height: 35px">
-    
-                    </div>
-                    <div class="InfoText" style="height: auto; margin-top: 35px">
-                        <span style="font-family: 'Scheherazade New', serif; font-size: clamp(2vh, 60px, 15vh);">
-                            Amatuer Designer, Fast Learner.
-                        </span> 
-                        
-                    </div>
-                    <div class="InfoText" style="height: 40%; margin-top: 15px; flex-direction: row; gap: 35px">
-                        <div class="DeepInfoText">
-                            <span> During my third year at the University of Virginia, I began exploring the side of programming involving web design and app development and found joy in designing and building websites. Learning CSS, HTML, JavaScript in the course of a few weeks and gaining a ton of experience through personal projects </span>
-                        </div>
-                        <div class="DeepInfoText">
-                            <span> I am planning on exploring web development much more in my fourth year of college, hoping to do this professionally after having a more formal education in full-stack and backend development.</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- UVA EDUCATION -->
-            <div class="ImageTextBlock" style= "gap: 125px; height: 480px; width: 78vw; align-self: center">
-                <div class = "InfoBlock">
-                    <div class="InfoText" style="height: 35px">
-                        <span>EDUCATION</span> <span style="font-size: 10px"> 2 - 2 </span> 
-                    </div>
-                    <div class="InfoText" style="height: auto; margin-top: 35px">
-                        <span style="font-family: 'Scheherazade New', serif; font-size: clamp(2vh, 60px, 15vh);">
-                            University of Virginia
-                        </span> 
-                    </div>
-                    <div class="InfoText" style="height: 35px; margin-top: auto;">
-                        <span style="font-size: 10px;">2022-2024</span> 
-                    </div>
-                </div>
-                <div class = "InfoBlock" style=" width: 100%; ">
-                    <div class="InfoText" style="height: 35px">
-                        <span>COMPUTER SCIENCE</span>
-                    </div>
-                    <div class="InfoText" style="height: auto; margin-top: 35px">
-                        <span style="font-family: 'Scheherazade New', serif; font-size: clamp(2vh, 60px, 15vh);">
-                            A World-Class Education at Thomas Jefferon's University.
-                        </span> 
-                    </div>
-                    <div class="InfoText" style="height: 40%; margin-top: 35px; flex-direction: row; gap: 35px">
-                        <div class="DeepInfoText">
-                            <span> After transferring from the College of William & Mary in 2022. I began the rest of my time in University at the prestigious University of Virginia in Charlottesville, Virginia. A place that seemingly can't get enough of their founder and the third president of the United States, Thomas Jefferson.</span>
-                        </div>
-                        <div class="DeepInfoText">
-                            <span> Studying Computer Science here is an incredible experience and privelage and has lead me down a path towards a career in Software Engieering and Full-Stack Development. Go Hoos!</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- WM EDUCATION -->
-            <div class="ImageTextBlock" style= "gap: 125px; height: 480px; width: 78vw; align-self: center">
-
-                <div class = "InfoBlock">
-                    <div class="InfoText" style="height: 35px">
-                         <span>EDUCATION</span> <span style="font-size: 10px"> 1 - 2 </span> 
-                    </div>
-                    <div class="InfoText" style="height: auto; margin-top: 35px">
-                        <span style="font-family: 'Scheherazade New', serif; font-size: clamp(2vh, 60px, 15vh);">
-                            The College of William & Mary
-                        </span> 
-                   </div>
-                   <div class="InfoText" style="height: 35px; margin-top: auto;">
-                    <span style="font-size: 10px;">2020-2022</span> 
-                    </div>
-                </div>
-
-
-                <div class = "InfoBlock" style=" width: 100%; ">
-                    <div class="InfoText" style="height: 35px">
-                        <span>COMPUTER SCIENCE - INTERNATIONAL RELATIONS</span>
-                   </div>
-                   <div class="InfoText" style="height: auto; margin-top: 35px">
-                        <span style="font-family: 'Scheherazade New', serif; font-size: clamp(2vh, 60px, 15vh);">
-                            An Enriching Experience at a Small Hometown College.
-                        </span> 
-                   </div>
-                   <div class="InfoText" style="height: 40%; margin-top: 35px; flex-direction: row; gap: 35px">
-                        <div class="DeepInfoText">
-                            <span> Nestled in my hometown of Williamsburg, Virginia, I am proud to call the College of William and Mary a part of my education and life. Alma mater of Thomas Jefferson and George Washington, W&M offered a top-notch education and a portal to the past.</span>
-                        </div>
-                        <div class="DeepInfoText">
-                            <span> I left William & Mary in 2022 to pursue a richer education in Computer Science and more opportunities at the University of Virginia. A bittersweet transfer.</span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- <div id = "bottomScrollBar" class="BottomScrollBar">
-                <span style="font-size: 130px"> COMING SOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOON </span>
-            </div> -->
-        </div>
-
-        <div class="BotNav">
-            <div class = "MenuWrapper">
-                <div id = "social1" class="MenuItem">
-                     <img src="linkedin.webp"/>
-                     <a href="https://www.linkedin.com/in/elliott-n-hansen/" target="_blank"></a> 
-                </div>
-                <div id = "social2" class="MenuItem">
-                     <img src="github.png"/>
-                     <a href="https://github.com/elliott-hansen" target="_blank"></a> 
-                </div>
-                <div id = "social3" class="MenuItem">
-                     <img src="insta.webp"/>
-                     <a href="https://www.instagram.com/elliott.n.hansen/" target="_blank"></a> 
-                </div>
-            </div>
-        </div>
-
-        <div id = "bottomBlock" class="BottomBlock">
-        </div>
-
-        <img id="scrollArrow" class="ScrollArrow" src="DownArrow.png"/>
-    </div>
-
-    <script src="home.js"></script>
-
-</body>
+            
+        </body>
 </html>

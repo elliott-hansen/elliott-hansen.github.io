@@ -1,0 +1,116 @@
+:root[data-theme="darkmode"] {
+    --bodycolor1: #181818; // main body color
+    --bodycolor2: #1f1f1f;
+    --bodycolor3: #232323;
+    --bodycolor4: #2f2f2f;
+    --bodycolor5: #3f3f3f;
+
+    --alt-ter1: #913237; // strawberry color
+    --alt-ter2: #a93b40;
+    --alt-ter3: #c24349;
+    --alt-ter4: #da4c52;
+    --alt-ter5: #f2545b;
+
+    --outline: #3f3f3f;
+
+}
+
+:root[data-theme="lightmode"] {
+
+    --bodycolor3: #F7F9F9; // main body color
+    --bodycolor2: #F3F6F6;
+    --bodycolor1: #E8EDED;
+    --bodycolor4: #DDE4E4;
+    --bodycolor5: #D2DBDB;
+
+    --alter-sec1: #010E14;
+    --alter-sec2: #021B27;
+    --alter-sec3: #03293A;
+    --alter-sec4: #04364E;
+    --alter-sec5: #054461;
+
+    --alt-ter1: #8CCFAD; // strawberry color
+    --alt-ter2: #7EC9A3;
+    --alt-ter3: #6FC399;
+    --alt-ter4: #61BD8F;
+    --alt-ter5: #52B785;
+
+}
+
+@github-black: #121212;
+@linkedin-blue: #326273;
+
+body {
+    background-color: var(--bodycolor1);
+    overflow: hidden;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // transition: 0.8s;
+}
+
+nav {
+    width: 300px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    top: 0px;
+    position: absolute;
+    h1 {
+        color: var(--alt-ter5);
+        font-family: Lobster Two;
+        font-size: 38px;
+    }
+}
+
+.scroll-track {
+    // background-color: var(--bodycolor3);
+    margin-top: 140px;
+    transition: 0.7s;
+    width: auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(11, 125px);
+    grid-template-rows: repeat(10, 125px);
+    // grid-auto-rows: 125px;
+    // grid-auto-columns: 125px;
+    gap: 16px;
+    padding: 16px;
+}
+
+.grid-box {
+    display: inline-block;
+    transition: 0.1s !important;
+    min-height: 125px;
+    min-width: 125px;
+    background-color: var(--bodycolor3);
+    border: 2px solid var(--outline);
+    border-radius: 15px;
+    color: white;
+}
+
+.grid-box:hover {
+    background-color: var(--bodycolor2);
+}
+
+// #g5:hover, #g6:hover, #g7:hover {
+//     transform: translateY(-2%);
+// }
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+        width: 40%;
+    }
+}
+
+#g5 {
+    background-color: @github-black;
+}
+
+#g6 {
+    background-color: @linkedin-blue;
+}
