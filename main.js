@@ -40,8 +40,8 @@ document.addEventListener("wheel", e => {
 
 
 const html = document.querySelector('html');
-html.dataset.theme = 'lightmode'
-var color_scheme = 'light';
+html.dataset.theme = 'darkmode'
+var color_scheme = 'dark';
 
 function darkMode() {
     html.dataset.theme = 'darkmode'
