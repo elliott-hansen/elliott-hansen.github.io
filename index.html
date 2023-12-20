@@ -1,42 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <title> Elliott Hansen </title>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+         <!-- Jquery and Imports -->
         <link rel="stylesheet/less" type="text/css" href="main.less" />
         <link rel="stylesheet/less" type="text/css" href="queries.less" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="main.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/less" ></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>
+        <script src="https://cdn.jsdelivr.net/npm/less" ></script>        <style>
             @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Agbalumo&family=Anton&family=Bebas+Neue&family=Fira+Code&family=Fjalla+One&family=Lobster+Two:ital,wght@0,700;1,700&family=PT+Serif&family=Philosopher&family=Scheherazade+New:wght@400;500;600;700&family=Tsukimi+Rounded:wght@300;400&family=Vollkorn&display=swap');
         </style>
-        <title> Elliott Hansen </title>
-    </head>
-        <body>
-            
-            <div id="ScrollTrack" class="scroll-track">
-                <nav>
-                    <h1>Elliott</h1>
-                </nav>
-                <div id="g1" delay='875'class="grid-box scrollable" style="grid-row: 1/6; grid-column: 1/4"></div>
-                <div id="g2" delay='865' class="grid-box scrollable" style="grid-row: 1/3; grid-column: 4/10"></div>
-                <div id="g3" delay='815' class="grid-box scrollable" style="grid-row: 1/3; grid-column: 10/12"></div>
-                <div id="g4" delay='900' class="grid-box scrollable" style="grid-row: 3/6; grid-column: 4/12"></div>
-                
-                <a id="g5" href="https://github.com/elliott-hansen" delay='925' class="grid-box scrollable social" style="grid-row: 8/10; grid-column: 8/10">
-                    <img src="./github.png">
-                </a>
-                <a id="g6" href="https://www.linkedin.com/in/elliott-n-hansen/" delay='900' class="grid-box scrollable social" style="grid-row: 6/8; grid-column: 8/10">
-                    <img src="./linkedin.webp">
-                </a>
-                
-                <div id="g7" delay='915' class="grid-box scrollable" style="grid-row: 6/8; grid-column: 3/8"></div>
 
-                <div id="g8" delay='895' class="grid-box scrollable" style="grid-row: 6/8; grid-column: 1/3"></div>
-                <div id="g9" delay='955' class="grid-box scrollable" style="grid-row: 8/11; grid-column: 1/8"></div>
-                <div id="g10" delay='930' class="grid-box scrollable" style="grid-row: 6/11; grid-column: 10/12"></div>
+        <!-- Boostrap -->
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> -->
+    </head>
+<body>
+    <div class="overlay">
+        <div class="overlay-row">
+            <div class="edge corner-tl">
+                <span id="TitleText" class="corner-text"> home </span>
+                <!-- <img src="./edge2.png"/> -->
             </div>
-            
-        </body>
+            <div class="edge corner-tr" style="margin-left: auto;">
+            </div>
+        </div>
+        <div class="overlay-row" style="margin-top: auto;">
+            <div class="edge corner-bl">
+            </div>
+            <div id="socials" class="edge corner-br" style="margin-left: auto;">
+                <div class = "menu-wrapper">
+                            <a class="menu-item" href="https://www.linkedin.com/in/elliott-n-hansen/" target="_blank">
+                                <img src="linkedin.webp"/>
+                            </a>
+                            <a class="menu-item" href="https://github.com/elliott-hansen" target="_blank">
+                                <img src="github.png"/>
+                            </a>
+                            <a class="menu-item" href="https://www.instagram.com/elliott.n.hansen/" target="_blank">
+                                <img src="insta.webp"/>
+                            </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-title">
+        <h1 class="title">
+                elliott
+                <div class="menu">
+                    <a class="item" href="#abt" style="animation-delay: 0.3s">
+                        <span> about </span>
+                    </a>
+                    <a class="item" href="#edu" style="animation-delay: 0.5s">
+                        <span> education </span>
+                    </a>
+                    <a class="item" href="#prj" style="animation-delay: 0.7s">
+                        <span> projects </span>
+                    </a>
+                    <a class="item" href="#con" style="animation-delay: 0.9s">
+                        <span> contact </span>
+                    </a>
+                </div>
+        </h1>
+    </div>
+    <div id="abt" class="content-block">
+        <div class="content">
+            <h2>
+                about me
+            </h2>
+        </div>
+    </div>
+    <div id="edu" class="content-block">
+        <div class="content">
+            <h2>
+                education
+            </h2>
+        </div>
+    </div>
+    <div id="prj" class="content-block">
+        <div class="content">
+            <h2>
+                projects
+            </h2>
+        </div>
+    </div>
+    <div id="con" class="content-block">
+        <div class="content">
+            <h2>
+                contact
+            </h2>
+        </div>
+    </div>
+</body>
 </html>
