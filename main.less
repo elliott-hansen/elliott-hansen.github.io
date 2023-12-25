@@ -23,6 +23,19 @@
 html {
     scroll-behavior: smooth;
 }
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    color: var(--altcolor);
+    font-family: @titlefont;
+    font-size: 30px;
+    position: relative;
+}
+
 body {
     overflow-x: hidden;
     background-color: var(--maincolor);
@@ -39,17 +52,6 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        .title {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            height: 50px;
-            color: var(--altcolor);
-            font-family: @titlefont;
-            font-size: 30px;
-            position: relative;
-        }
         .menu {
             position: absolute;
             top: 50px;
@@ -90,6 +92,7 @@ body {
 }
 
 .overlay {
+    user-select: none;
     position: fixed;
     display:flex;
     flex-direction: column;
@@ -98,11 +101,13 @@ body {
     .overlay-row {
         display: flex;
         flex-direction: row;
+        align-items: center;
     }
     .edge {
         // background-color: @dmodebody;
         opacity: 0%;
-        margin: 32px;
+        margin-left: 32px;
+        margin-right: 32px;
         .corner-text {
             color: var(--altcolor);
             font-size: 20px;
@@ -161,6 +166,7 @@ body {
             font-size: 48px;
         }
         p.content-text {
+            margin-top: 50px;
             // border: 2px solid green;
             width: auto;
             font-family: @altfont;
@@ -169,9 +175,16 @@ body {
         }
         h3.content-highlight {
             font-family: @titlefont;
+            color: var(--altcolor);
             font-size: 25px;
             margin-top: 5px;
             margin-bottom: 5px;
+        }
+        p.highlight-text {
+            width: auto;
+            font-family: @altfont;
+            color: var(--altcolor);
+            font-size: 18px;
         }
     }
 }
@@ -211,6 +224,8 @@ body {
 
 .modebutton {
     padding: 8px;
+    padding-left: 12px;
+    padding-right: 12px;
     border-radius: 32px;
     transition: 0.3s;
 }
@@ -225,4 +240,92 @@ body {
 
 .highlight-inline {
     background-color: var(--accentcolor);
+}
+
+#return-home {
+    text-decoration: none;
+    transition: 0.3s;
+    h1 {
+        user-select: none;
+        padding-left: 7px;
+        padding-right: 7px;
+        transition: 0.3s;
+        border-radius: 64px;
+    }
+
+    h1:hover {
+        background-color: var(--altcolorsubtle);
+    }
+}
+
+.hidden {
+    opacity: 0%;
+    user-select: none;
+    pointer-events: none;
+}
+
+.visible {
+    opacity: 100%;
+    user-select: all;
+    pointer-events: all;
+}
+
+.contact-button {
+    z-index: 5;
+    border: 2px solid var(--altcolorsubtle);
+    border-radius: 64px;
+    margin-top: 25px;
+    height: 70px;
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+    h1 {
+        
+        user-select: none;
+        padding-bottom: 3px;
+        color: var(--altcolor);
+        font-family: @titlefont;
+    }
+}
+
+.contact-button:hover {
+    background-color: var(--altcolorsubtle);
+}
+
+.highlight-button {
+    z-index: 5;
+    border: 2px solid var(--altcolorsubtle);
+    border-radius: 64px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 130px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    text-decoration: none;
+    h1 {
+        
+        user-select: none;
+        color: var(--altcolor);
+        font-family: @titlefont;
+    }
+}
+
+.highlight-button:hover {
+    background-color: var(--altcolorsubtle);
+}
+
+.add-credits {
+    font-family: @altfont;
+    color: var(--altcolor);
+    font-size: 12px;
 }

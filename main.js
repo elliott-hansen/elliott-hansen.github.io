@@ -40,3 +40,17 @@ function toggleColors() {
     }
     $("#ThemeText").html(html.dataset.theme);
 }
+
+function getScroll() {
+    var scroll = this.scrollY / 100;
+    return scroll;
+}
+
+window.addEventListener("scroll", (event) => {
+    if (getScroll() > 0) {
+        $("#return-home").addClass("visible");
+    }
+    else {
+        $("#return-home").removeClass("visible");
+    }
+});

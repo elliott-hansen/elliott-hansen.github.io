@@ -20,12 +20,16 @@
     </head>
 <body>
     <div class="overlay">
-        <div class="overlay-row">
+        <div id="TopBar" class="overlay-row">
             <div class="edge corner-tl">
                 <!-- <span id="TitleText" class="corner-text"> home </span> -->
+                <a id="return-home" class="hidden" href="#home">
+                    <h1 class="title"> elliott </h1>
+                </a>
+                
                 <!-- <img src="./edge2.png"/> -->
             </div>
-            <div class="edge corner-tr modebutton" style="margin-left: auto;" onclick="toggleColors();">
+            <div class="edge corner-tr modebutton" onclick="toggleColors();" style="margin-left: auto;">
                 <span id="ThemeText"></span>
             </div>
         </div>
@@ -33,7 +37,7 @@
             <div class="edge corner-bl">
                 <!-- <img src="./edge2.png"/> -->
             </div>
-            <div id="socials" class="edge corner-br" style="margin-left: auto;">
+            <div id="socials" class="edge corner-br" style="margin-bottom: 32px; margin-left: auto;">
                 <div class = "menu-wrapper">
                             <a class="menu-item" href="https://www.linkedin.com/in/elliott-n-hansen/" target="_blank">
                                 <img src="linkedin.webp"/>
@@ -48,7 +52,7 @@
             </div>
         </div>
     </div>
-    <div class="main-title">
+    <div id="home" class="main-title">
         <h1 class="title">
                 elliott
                 <div class="menu">
@@ -72,11 +76,11 @@
             <h2>
                 about me
             </h2>
-            <p class="content-text" style="margin-top: 50px">
+            <p class="content-text">
                 Hi! I'm <span class="name-inline" style="font-family: Lobster Two; font-size: 28px;"> Elliott. </span><br><br>
                 I'm an up and coming graduate with expertise in the fields of Software Engineering and Full Stack Development, I dabble in UI/UX design too.<br><br>
                 I am a current student at the <span class="name-inline">University of Virginia</span> in Charlottesville, VA. I am in my fourth and final year.
-                I love this University and everything it has to offer academically and socially. I have made some life long friends here and I'm not sure that I'm ready for the bittersweet farewell. <br><br>
+                I love this University and everything it has to offer academically and socially. <br><br>
             
                 I've created apps and worked on projects with industry-standard programming languages like <span class="name-inline">Python</span>, <span class="name-inline">Java</span>, and <span class="name-inline">PHP</span>. I've also worked with frameworks like Angular, NextJS, React and Django. If you're a campus recruiter looking to get in touch, I invite you to reach out. <br><br>
                 Outside of development and school, I enjoy exploring foreign cultures, going to national parks, and getting out to new places.
@@ -106,13 +110,63 @@
             <h2>
                 projects
             </h2>
+            <p class="content-text"> Here are some projects that I have worked on that help to showcase my skills as a developer.</p>
+            
+            <h3 class="content-highlight">
+                Enigma Machine
+            </h3>
+                <p class="highlight-text"> Programmed in Python, my Engima machine was an attempt at re-creating the encryption algorithm used by the Germans during the second World War. The original machines used to encrypt messages involved many moving parts that were physically changed to set configurations. <br><br> The program I wrote allows the user to configure their machine using the command line which allows for a unique encryption and decryption cipher.</p>
+                <a target="_blank" href="https://github.com/elliott-hansen/Personal_Projects/blob/main/enigma.py" class="highlight-button">
+                    <h1 style="font-size: 18px;">Check it out!</h1>
+                </a>
+
+            <h3 class="content-highlight">
+                Hurtle
+            </h3>
+                <p class="highlight-text"> Hurtle is a Wordle-like game designed to be a little bit more challenging than the New York Time's daily game. Hurtle has the user guess words without knowing the length of the word and without showing a keyboard of possible characters. <br><br> This game was programmed with JavaScript and was an exercise in UI/UX design, web programming, and algorithms.</p>
+                <a target="_blank" href="https://cs4640.cs.virginia.edu/enh4bn/hw6/" class="highlight-button">
+                    <h1 style="font-size: 18px;">Check it out!</h1>
+                </a>
+            <h3 class="content-highlight">
+                Personal Website
+            </h3>
+                <p class="highlight-text"> My personal website was built to hub my social and professional links and showcase the programming projects that I am most proud of. This website is almost entirely static, and requires no backend. This was more of an exercise in UI/UX design. <br><br> You're here right now. </p>
+
+            <h3 class="content-highlight">
+                "UVA Events" Event Planner
+            </h3>
+                <p class="highlight-text"> "UVA" Events is a Django app developed by myself and a small group of students at the University of Virginia built for fun that allows students to create, plan, and advertise events around grounds.<br><br> This app was deployed on Heroku and has a fully functional backend and commands available to superusers to manipulate user postings.</p>
+                <a target="_blank" href="https://cs3240-project-redeploy-771a9fb8406e.herokuapp.com/home/" class="highlight-button">
+                    <h1 style="font-size: 18px;">Check it out!</h1>
+                </a>
+                <p class="add-credits">
+                    Additional credits: Manmeet Singh, Henry Brorsen, Niroj Paraluri, Ciel Park
+                </p>
+            <h3 class="content-highlight">
+                Wahoo-What Major?
+            </h3>
+                <p class="highlight-text"> Wahoo-What Major was an app developed by myself and another student designed to help new students at the University of Virginia decide on a major based on how much or little they agreed with 26 different questions that revealed something about their career interests. <br><br> This app was primarily built using a PHP backend running on an Apache server.</p>
+                <a target="_blank" href="https://cs4640.cs.virginia.edu/ucy5mh/sprint4/" class="highlight-button">
+                    <h1 style="font-size: 18px;">Check it out!</h1>
+                </a>
+                <p class="add-credits">
+                    Additional credits: Kevin Sandoval
+                </p>
+            
         </div>
     </div>
     <div id="con" class="content-block">
-        <div class="content">
+        <div class="content" style="display: flex; flex-direction: column">
             <h2>
                 contact
             </h2>
+            
+            <a class="contact-button" href="mailto:enh4bn@virginia.edu">
+                <h1> email </h1>
+            </a>
+            <a class="contact-button" target="_blank" href="./Resume - Elliott Hansen (v4.4).pdf">
+                <h1> resume</h1>
+            </a>
         </div>
     </div>
 </body>
