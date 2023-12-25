@@ -3,12 +3,15 @@ console.log(localStorage.getItem('colorscheme'));
 
 try {
     var color_scheme = localStorage.getItem("colorscheme");
-    if (color_scheme == 'dark') {
+    if (color_scheme == 'darkmode') {
         html.dataset.theme = 'darkmode'
     }
     else {
         html.dataset.theme = 'lightmode'
     }
+    $("document").ready(() => {
+        $("#ThemeText").html(html.dataset.theme);
+    })
 }
 catch {
     console.log('fail');
@@ -35,4 +38,5 @@ function toggleColors() {
     else {
         darkMode();
     }
+    $("#ThemeText").html(html.dataset.theme);
 }
