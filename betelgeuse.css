@@ -1,0 +1,86 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgb(33, 32, 41);
+    overflow: hidden;
+}
+
+h4 {
+    color: white;
+    text-align: center;
+    font-family: "Freeman";
+    letter-spacing: 1px;
+    font-size: 24px;
+    height: 12px;
+}
+p, a {
+    color: white;
+    text-align: center;
+    font-family: "Freeman";
+    font-size: 18px;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg {
+    background-color: rgb(255, 90, 14);
+    z-index: 3;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-halo {
+    background-color: rgba(255, 86, 39, 0.329);
+    z-index: 0;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    animation-iteration-count: infinite !important;
+    animation: pulse 5s 2s normal;
+}
+
+.bg-halo2 {
+    background-color: rgba(255, 169, 39, 0.053);
+    z-index: 0;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    position: absolute;
+    animation-iteration-count: infinite !important;
+    animation: pulse-wide 5s 2s normal;
+}
+
+@keyframes pulse {
+    0% {
+        scale: 100%;
+    }
+    50% {
+        scale: 105%
+    }
+    100% {
+        scale: 100%;
+    }
+}
+
+@keyframes pulse-wide {
+    0% {
+        scale: 100%;
+    }
+    50% {
+        scale: 125%
+    }
+    100% {
+        scale: 100%;
+    }
+}
